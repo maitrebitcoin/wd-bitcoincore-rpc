@@ -1,0 +1,29 @@
+
+/cache.gestion de sources
+/Donn�es des tests automatiques
+/Exe
+/Historique
+/Sauvegarde
+/Corbeille
+/Gabarits
+/Svg_*
+/*.cpl
+
+*.DLL
+*.exe
+*.cpl
+*.wxres
+*.wdcoverage
+*.cache
+*.WPF
+*.waudit
+*.env
+*.wdu
+desktop.ini
+HstDuree.log
+Folder.ico
+
+Svg_V25_20210117_0718
+debug.log
+
+Svg_VI260075
