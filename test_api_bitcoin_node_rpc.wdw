@@ -1,0 +1,741 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : test_api_bitcoin_node_rpc
+ major_version : 28
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : test_api_bitcoin_node_rpc
+ identifier : 0x2423b497035ec5fe
+ internal_properties : CAAAAAgAAAAn0i2YOT5iiICpUEesDRyVDd3Uvr1Uu9MfDtcdvvQGElfbBZm+FYAAoO8udowAVBDkMhrVTD8Gv4/V0XbnejiGxoV+HranzDSFjNJ0/0wJl/dgrOiRVGZBV0ZKOV+ydewG1JTqjUm4YReTIUv/mC5PmxynSBzOEYSRWNKTJjbLTU49UsZJ6/MU7RzvXiHF0y7Xi3k39JHqh87hCBjcflkywIvQTqbZeB00VhUhjtnP9heYFoteygpMCzk35vw44Vls9I4ymLWk6OOUh8cVq9ySTJW6n3ZhiUZ9H7wtLlOY4Lh9kOtjk6OEyaOH37CkfcovKo9JxA1Kdw4AOBh3jFbMbzfmAdtcrnSgKq2w6dLLWzaS4LhmivZMIRpDtr/vPFMI9DPAWL3UwVMYVjbU9lzPIRITjuMlC/+7pt6/SUoy5257CW9nkBBPAuRMErj3aKxWAGYXsYT5dkd9sVpwyujodrcEjMQQMwd0tE/MRr3x+VC0em8sqdeFwgWrlBWo5/TK/1th21qu1iLP8g+M6cA35ow8/90IzlHxysJbgAXh0z4/ShHtOCFF4l/4W5xyQhUaTyJHhnS9jfZy0PXz+anFIFPs6bcpVLWRK2A5j5/+rTBCP03zgUh9SwEvUzFGWOxVcYRJu3X/l7Dk5KL7QY27tbiX/4cWCPANlv8CwnqCqM+g7uLzSyQYVmsHFcskmBrfzGEiLcsBi9SNMh6DN/C4Ce3sEBtXv+r7+k5+BUQdfwdHmEFzQixIrp/GPaqQ50jgZwDnd6XXeeZ7nRGTrlicZFA0yZjHeLg5KVkmGqejJULOl+GRTHCeFCicGEISOuM9ckGHqFnizUsRQkhMR5ijkxsZ46KeGRtN/281BVuypF87Kjui3YZvGQrjxcwlVzp70lJNHHmy9zNGsGIH2QwH1lptzKWxEokCKD5PI7IzWWYtwtdNklHhzm5N5V6SUD+OeN1KPbzntObkkpklT8CP1r/qVbJaeoS/CjID67Gpu8bBKNs=
+ properties :
+  width : 801
+  height : 681
+  widthClient : 799
+  heightClient : 649
+ controls :
+  -
+    name : SAI_Numéroe_port_localhot
+    identifier : 0x2423b4cf03aaa283
+    internal_properties : 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
+    properties :
+     x : 24
+     y : 39
+     width : 245
+     height : 25
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+      -
+        code : |1+
+         _EcranVersConfigRpc()
+        type : 17
+  -
+    name : SAI_login
+    identifier : 0x2423b4cf03aca283
+    internal_properties : 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
+    properties :
+     x : 24
+     y : 71
+     width : 241
+     height : 25
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+      -
+        code : |1+
+         _EcranVersConfigRpc()
+        type : 17
+  -
+    name : SAI_MotDePasse
+    identifier : 0x2423b4cf03aea293
+    internal_properties : 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
+    properties :
+     x : 24
+     y : 103
+     width : 245
+     height : 25
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+      -
+        code : |1+
+         _EcranVersConfigRpc()
+        type : 17
+  -
+    name : Paramrètres_de_connection
+    identifier : 0x2423b4d203b1ae6a
+    internal_properties : CAAAAAgAAABTMsAilDVqiyRYR3AtizCrwphXLErSfxblXZCt6GuyBKelArJM+Rhnnj94+oU60Ruc857DfhoL2gs4ETHzY4NDpFML6wYF2UgdBAg5/I6fwhXdMghSFqyGdV90Ril8G0oVa7Qqi5H+tiSHxoL/tp7U+SdC7vtUCi+zhPrMlQMfVdsP2cQ5F0azjPaGdqoBU8gO7ztTIQz+sePabmJqTesiJQUs1v1sxEVNd/aSzCZdfT3cpE0o8rZ8yAeOeKmPy2/ldRTh7Hp/M2o3BfKFP6ouyWdsDxyLWWE7Ni1GtK1oaK+u4edmnvNh+E82HvNrVUO+i0eCW+nf3f5b2IPcOMCt9nws/srXdMea+ozh0SsYyOS0OhI1kjYHbfEzTy9x3WetHeWe+z3rref9b1KoSsOA6B1OuQQbuawK79/oTGMP9ixBxFahBkYeWdef099Gf9jqhLWfLm0LF63k7a7PsEa1oUx+r5GjaR+cEa9+Y9T30AbSmym0qoKG4n57xOnhg0WBQ7GmbgneKNpVg6faKX9QSa4pccTpuBAxUcrUZgiz6pSzI9oixEDM40TN8dK14tqEqRUGS0A/t1sXLpkEXn3DNHcK/vpIRtu4vy10n/OWnHKT4CIzFfrRRJ1f19uQy+Sd93F1QAlaPh4m0kn8t7VuANAM6uG+S4hoOKoJ/ODWybSzQsgKFRvMvLf11Lz6Q/sHSoCQdrl1+RNn0oid5Rq91jTI
+    properties :
+     x : 20
+     y : 13
+     width : 777
+     height : 20
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes : []
+  -
+    name : API1
+    identifier : 0x2423b4fa03f44839
+    internal_properties : CAAAAAgAAADcwH8S0LkBmftExmuHliGCpi3g7zxBS/4ORiILCHJM+htnIQ/W2BrzBCPI3aACqVh5f5f1f0oPkpZgTiv8gjhKEH4Yb/dPhDWSUyG/SYE2bqzgkK3dr/Jt1YOQCzcRSj4pOc0/VmCvwpF8LFB/2OU54WvC6r9kkuDBnmcmfsi1YdTh4bMSUbtFtnOcatRK0eXBY8uU0ZaAav2Tf5mwYBGA20ytBlyDIx55Bx3HoHlRunp7hVAx77dGeKXSC/YVifQle3iV+7cnXTe0jg0qwmkkCYi7AoaqVZudzdp0FAni68NTjFvjKYo6rPA8rhYd8rjGSGaye/p3FhqP/N0dBox94OPx5HcUltvYtWVFco6OC45Z3H4ppMQbdLZDr09AMsIJmoYUhW1ZLy5f/ZBN0wjbemCv0ZjbKgrOUbcI31GehAMB6QEJ05dd+10EVAr0BapCC7Ei2yeHNTULewiFT4gRKLTvNpbw2j58FmXyLcblqyT82OfYCyWOXIdIVTH3Uu1CGWu5j0iWn75+tXZAnFlaOjGUOq090X5S5lOWpY5xKWDfEi3VUPPeIltbR1nRbdBgXHu+dinOoMauftsFVpX4JNrF7EGc8Nu+hNmNWRbGibzYb8ykdpH7xEWhOC5WGIfPj1c4e+j0W6PVgJsXBVCDjj8dd4btup50
+    properties :
+     x : 23
+     y : 158
+     width : 770
+     height : 25
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes : []
+  -
+    name : Test
+    identifier : 0x2423b51b0405ca3a
+    internal_properties : CAAAAAgAAABcHsppVo5UtEeOpXiTE2ADKhyAWitMNFYpabOrhGTbfYDwe5UB4Ux4joQCeC1E8v4kmXqKlLNqAKrJTsLh626xeBNe4rNUMJUJqcnvuHIyMARvP0Kd8RV4dykyo5/NZXuB3vhrfyCXdZQjKRyPFcmvcQ992c++/SdbbvExhM/6k714V9R/LFRPf0Pfxyl4mBCg5HfuWwlP3ctUZla1jG0wyLsT0JbJEULvQ0iJ7Zxbq+7IgLfgoLBk2jzeF5TmVZ5qZ6StIh+7FpHMwdKAy3gkX6mktI7ri4BhLR2V+WNsR5uG/ky/7Mdsjlf83T4DeTSPAnyVefxPLiawE9RCv5W7phz+L0ECHuFUXmVa94LXgTuGsHOvMFaFB2Jlll2RkeWza7QFwzwqucd7DnqtAcVOiieB+cZeXC8Uv7tmcv61AQZnnQ7/We4GiJrRAg5iAZVvrQ3YEapYL5sjipAiw8++OkiZN8/sdG6dxC3gC/bK0JOxRqOr2GIbmjiG2JEbaH4s/f6Kq1VYmv8gnFB24baV18qDnQobGcnsF0kK8M52UqBMiUovJ7I64AFtFh4wii5GXYGc/LUXCdPiOIdDHlSbRrviTkDMROLHhjA7OKpIkTcn5p1/+xZ18kHS3MgEbzOiEpcAt4fMqAAbbVpMTvaa/Q7aDmIpAfEdDRw63Gm+ePZO+DnVJktk0/555wMD4NMxgY9hE+Xw4FxoU9Mk59KlAS/HneBpEeniTxybMyucosDAlXVN0IVTDovqLvlIkB70ON4cyUa2kujvNpbW9DEzBApc6D4WIGa5CWakWupFSDJB95Dse02ZPlE49V/4DSPGotGRff22V3HfyQ9mCgi/1DosRbrHNDZ927mOwpwiZT0c8ccuVlPUyHLD7tBICW02VyiHxiDXeEF4nwwWbPHEe5KHgQv6n1/YHonBdcTNr6HbeuuhRSMX7w6NihVWEDPigUX6+8R0cetxNgYMr1dk2RvnViWwpry0hXEqdzLXwZIZM0c9sQJLaMjbANkB6IVGvQqdW3tb0iMMXUKSPzfNT5/rU/GUnwla5xxuUSZouwMxoc6FyhTIdqt1GBCIad+c42NoGrdAnvYgeg2f/C8/EbNGXCQ6mawo+2yHTHXQYdfoJgF7KRUNaUrN+vyjg4chwqZNZ7Rri0GU+6AGV4f4iWcgw+Y8QhqXnQbp2aupQMgNgRZF7LPhrhxa9pBveRQbHXadicNO3IJYOs2wYpdOjdQcoBJiJMXG572wczY/mlG3ncQFhn+GHuZUSC+lUNdrvgzG6T0klt1UfIpHOLU+4bYh6V5NEe4GhFObIqHyIGpcVbrgCRUpuiTWBj3wQQSYw5/tURotfHKq
+    properties :
+     x : 280
+     y : 103
+     width : 242
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         bitcoin_core_rpc.getblockcount() 
+         si  ErreurDétectée ALORS
+         	erreur()
+         	retour
+         FIN
+         info("OK")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : Générer_un_fichier_de_configuration
+    identifier : 0x2423b5310408225d
+    internal_properties : CAAAAAgAAACiS5IrOwlFueNNa/YIXteEneV/uDKmB0kHXfiph6D/1xh8Kk4ZI/+soOBngPCykXRQnaGo5WU3PpLYW7G8cgSVWIot9YV0ilJE1G7q48dIqXcEEAQtZRdzv457gUWrl6lkAQGiEZYxaJmi1MbmfRGI1q9M89HVAc5DULHuVp3oyf3mUITLHdrKkcTEAqubTDaSgKrgRH0nYtjXR0zi9dagSfjp7wMMbizh3iVp5wkmy1/thct1we0gMrZc69GJS+F3/+acrRegZgNesnP/PbH2kAi5PtBYjXHzJVDrKrXxzLAauBBw9q5BdLWPMMXaukZpyN99PVpf7USJ1B9vYDenFmy4K+qDe0Qt/176BTpWlfsHNSTpoUmtPjMxbgEYTsLwYyJFT6O3yVFCLrk+0vpQleJUrHPiN8HO8GUZxADT7ZqkT6tkUwRUq227V7Q2K9v1jINI0FdIOilExw4DIRM501Nu2mtTGu/1u14Omz5VIDHRPb2hlUONoCiGZAIyPTNUt2pQC/R1LOxB8r/qpDU6qSPUAPTROXACg0VhpIwah0SHMBA+WLM0X83FZA3sbb7Y2j1Gk32NqeCx8vL0v76DvShJwwljikVXZFccLZw0H/kRn6fpqdshQ/X3foVtonc1YtrK22uiJ3ERERtyt/urtnfZk4d6ADs9oo+Zsc6VoujkIYWC75dcDf/M99XtTwZQCg1OFnXgFx2lcRIh3VK3Z1i/f/aepUOnzCEToemKgqwkNuVLItXGBPXHUjcvPoVLM21Ps5EWIBOSBPhwFZpsGuX42u+KCQCp5fjWSoqQmTZoF5oxkllQSr1FdzzgGeZmPCHHXZCor6AGU65GyE+qOJaKc2xl/u0/O7x1oSUVCs9N+tpgwmzx3HNNscn+ZgSNxFVLEJJkfMah5HouyWP+4hfkWjz52us3JGqb9k5zrSgR7CExn6dOqwhBzlaA+xN1Y4Eq9Y1Sz0m1xfv3vSXxDjN+WBUMG9RrlnCCMYJLEeVtwRG/NpbhzUJnDq8+11der5D5WSRqtQ6G5LpopBF55sbLGai686HJjlCSMHSZbdab6kfoLpx0qJZ4Eu9i8ENUZTrDUyJ7oHan7oqQLhjSqmDqzVLvW2UgzkTw2/jCLiRvNxpInp3DtkG6Gu9gPKLbf1yhAX1p9ILnocJ4Vg3xdSFlKcopOo6XX9RoKbrMc2APydxQb2EItIa7ROA8U5wDZoDt/1rODD8aBLWoS70Vc3iLdXLNRpxQzivpSo4QfmiGOUBaP8YLOk4YDh7Pt6VSS+RNOCNXtmOwVRup7X/H1WuoZ6zvkHbN89pA3gN6CsBWhE4IcfIXeIUQVka/VQJndX2eLAwic2tKcXB41AALLH3ucZC89RO04mX4niPrRp2MIG6AOR0VBkQ42red0gbqNHHLnDkMYYi+AudHZPwjiypDOf0=
+    properties :
+     x : 282
+     y : 40
+     width : 238
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         sConfig est une chaîne = bitcoin_core_rpc.genèreSectionFichierConfiguration()
+         SAI_Résultat = "Rajouter cette section dans le fichier Bitctoin.connf"  + sConfig
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : RESET1
+    identifier : 0x2423b55f040cd496
+    internal_properties : CAAAAAgAAABnlMUlBoHWAjUk/Qv+qjPpEqGYQMntKrgDC2cnveRNFlp5kWc9TCUzI0P6Sa2Rr0FeBL5fBhVl91wIy0u8OI8Cm4JGs35E96Z914E6SggKHRY/vlILc31eZpGSTOSUYVlC7oBMJqJANlJp2snBd75RdwhkLpVHMdnaV8mYK3TcBa5D+jrTbBJMHHOcFtXI8tpg2hXZXWe/3dZhWVNGfEUcLTJfpgzY4MY9ERHBHrNAFZgCbIEQ1vmgzua2i9oa0Lcf3i3qeLYEznTK/sGpGG89LYRtsVBQ5nVeXNaUnNcoYb/BtTW92iLkKGmftruhLZy7d0fZaHHCK66lE6R/zP41SFqZNW3Cad8dIgOPxb14ouQGME3dCGUVpTKQ7iN4LaICAuKmFQyiSpuleOhLTdarl9lfeMDO5X20E7NglP0XVy19JOBzKtu68xJxOT2/VYVVCI8X8K7D7QdXUvDaWahOUuKq+Kgc7fXrquwYCxmgxvErOKKLxadt8Sx1JsQ7eNRwEOq88Nhie/9ilqoXhwJpwuAFEfsA4u04Uq7TujcFot6B7DwF4DgZvfHrWmxVi9mTaZtreznF7isRtFeP66QuZIen0eQ6Kv63z8e4yFGcp71dWefu2P9EYfDE1N2j/zq6EjeROpwCSzf2W2KmkXN1Dx7yiHprwMVeTt8X4mj1U5QkJPD1KyHj5Ah5+k1mszaZo5O6+Y509bkG1P1NJ1aPgkAyn2N5hDPies2R6AmyOicPDHvGPMyxVkhbetL6lMCoNNEiuRbztfXCmFPIpawx/8ftxAliTyKH4ro8bcB7qYlR/Y+STZLJO6EzbVRSm0JAULWFGt1btWDmhPOTXDzEAgaibIW1wYgCqgDT+FH2grKVl+sv1mxPcaJcbHoCyT7kCixpgLnTggUOhffWE2f/WEiz+H6Tw0vEklWFBRxaAwksG1gbMXoGxAV7kBy3qdd2VLQfxxwiToe9vq0H1ApovOL5U75Dk8Bah3OHO4l12UGNnrRqEGvN+bklt/udfXptesq8nySmo13is7FeZldk0dT1VbM7cXqHVHv1JZwrgA4qYL/Abr7aEV+Q2NwlNUEKAqF7pn0XbnUPlsi28rypP6i5XDLI3+kQE1YGdjDBzrwNM//6JRDHFdmhj+4WUXKvu8JwguDaqRFC4+WM+rYjL6Nhlbn4oVCLnkcnyEUVNslJRiKa1u5t9KnBwuelf3iIIH8XfqrSc2soAIgqRS5tj5Z+n9fGLBpDJMK50T0QtwPWuuji8rbETrOHiih9LDWE81Y6KTcPU0ysjLMdQMVQygj6CSCXEMSu2QBt6VT7OJSjQPHhcjCVxSaiPySGx1HsATVramOr5TEOxg==
+    properties :
+     x : 280
+     y : 72
+     width : 238
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         SAI_Numéroe_port_localhot = 8332
+         SAI_login				  = RéseauUtilisateur()
+         SAI_MotDePasse			  = GénèreMotDePasse(12)
+         _EcranVersConfigRpc()
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : INT_Trace
+    identifier : 0x2423b5990429b522
+    internal_properties : CAAAAAgAAAA3qjTaLxWPdTxtqYse0u6QuJCdpC425wDlNhkamPx2hVp98DghxvLqBNT0RW0avxunbpmVoalFEKfr4bWjsvVcx8nRwHgb8oKA7kzJvt1k/2zy0ndAR8b57jzqDl5Td9fPxHC9pKySN71lTSvU+tyjFQlkrJ6wcIm7LsuxslUDC4vhvmpGPfsBum/RWVr9ph39N0+eQP6bc+pMFb+QQ0iIGRSgdB4XS2ISYfYzLFsktk8aHCGEGHeACg/qcIAAcu93g2fGSB0cUDO0WqhCPXVS7Hq9zQBZoNchlxrNRH5PPa/kzrgNaHNiruvCBSSKoz3vaUAzrSrswoNAOkcov7mIpzf+RhgQ3pLDLyTEc7VXXUVqceoJ1GAaDmh/Tz9I0yixLO6rUTCxVGcUOFdkrCuD7UufdaEGdhc3NfdnDjYzRctQ/ycYktCAUy5wsa4TorY2HClnJL8Fa7OufxC8AojH07WnU3hQ1yuIMVhY4RJThC+t8pAcu2BjQjxk5ZYL6/+t6Qxit7ojuohL64fIYpLgnZ/qQnDCD27+m4Hc8patPEG/c6KEH6u2qIOas9x5zqDQBNmL6ulggrNGXMnWorKreh5x0gfe0wKHK6fawM+TwD+IDSzMA96Berj6AbxyiboEf48KVwzWH1eIV2toIHBTnSMjJNs+9DOK6TYtAqym+2UEcAj6DaAlw7y28hmM6nyoSk4b1GeVzHp24dSileQU82NQDXVL+HiVsEHhuvmAqHuYmQtoyZQ8dSxyASRqgO8ncAOJhES+M6S9XBe3sNWkTPNbSgqBsHAputT854lNB09Nb+7+JL44cY/xe8gIa4Fo9nSogy/dDfs6KGI4/9fZAw8yTPT54FHRcBxMwwIqUS+lqP5MqDM2PvNfk/R/HuMLIHLAkTIZaSPg9rkWsWvIv6XfqUnfvTOzxPSNQTCVDrCvR0YfPVoFl5EsPJsdT4JQyM1TU/BnQQUu8rIBjqwvN9BFf3VJCJimG1hiEkK8amvm0snPUgy5wk6E+/ChAlShFjaNYYhuahf766qvteqeTgBGsdn2MV2J5KyxOSek35dbvOQ6ndcpduY++r2CAFS+xUX5WJJisTl3S434TgqupTSzoN57bjouNk6RCi+tBNVu2BtlcZL/TlGRxOfV/4NFqu6vcbat7dKpUpvfMX9YXb4aLcP2JkZWvpqxcStzOJRQUMJRQnp/e4i3OewKxhSakCFsj2DjKDe6NOURKVmxirTr3q/caQW6BCCgv0n1F/T9cTir2fjTReSmAGK1LflEeH83eSMjeF2sxwGTVsXjShOFmGmfrEhZDpvcepV6FW7FWtFoBcrmOCCtRV+KqFmOHEYPjHZhn51zNx/Fzeyncr5ahv3Gk+4ia/118r7nONLGg/AA11puKEMC6ghtAMbm0Wb9n86CWh6RBWBCKfPfeB7D0QUBM6SWhbRhAbTYPU6rFoUpNa+XoqhUB+bwjY6wla+hCO3mhClEtEb9BXIKdL+WGlYM+F8ugY4QF2qrdmJCfHCCX2aRwK5Bw9HpUzt1zLF04T59DlstVDOQ8FHGmfRD9F0RtCAA1W3ZkjVrgGeqak2oMVm0yTolp7IG7yM53IDCT+Rs5jvXM3rhi8dmzT0z
+    properties :
+     x : 175
+     y : 154
+     width : 153
+     height : 24
+    options :
+     -
+       internal_properties : CAAAAAgAAAC1xofJS3Kpz2yLbjEQY/bWNLKawKSravNupGsFbnxuWdLN1fJgMEae/VGL7R4Acfl4TWj5kMJVvSO903zqxqan9mQYQu6qa5TVi2RgE05OwzqeFh3X3tI/rxd3ndZAvvPnrSZu+jmqhSsLT8p4xQN9unC0j6G7DJa0+ewMXpL6PB3Uqbue9agFT1uLBTkkI0LlKNBoWsYh7q2FRLu0wk9vgm1MJzj3ygFX6m4lBB88Gt4LGC8=
+    type : 5
+    controls : []
+    code_elements :
+     type_code : 5
+     p_codes :
+      -
+        code : |1+
+         _EcranVersConfigRpc()
+         
+        type : 17
+  -
+    name : getbestblockhash
+    identifier : 0x2423b5dd042dc172
+    internal_properties : CAAAAAgAAAD8G0J/X8KkbCT0Yy+aqOXyAsEn3efsnFLZDhJP6xHOr7cVW5TxvPaRcPvB3DPm2dOuQLyoIJOKJKbl0zGjYB7+yry+HQ6xikJJdv52dEcrRHNfgfyOUfamu1WnjNW1Jr4h2hjgHeF7295EGCHcZ48Tv4JnSCNCRL+QPiVDruuptGDQ6SooP9RCVUZDRcGWLHsRmg1M6SYR3T6bi8qTL79CrVKswiFZgzQ4q2ZtxVryXECvXUlgeaYWe8HrMrI3RZniUmHPCGn7w8NfVHlDPimQvT0JAW3MPbD/7SQ8/TT06tgW1htkNTFuntcr0SbsYlnULF7fYtCtTUne8LCm8Z4JgXGlY5Gho3OAqmfxYCSxL4+2rxrrAqj2n1+zq60dxxJ060HDu3c3E18oBOmpBGynpHff3U9ViMriX0ZWa/eLU6w5MsCzvfA/9JaVQT0TidmB7rhDDUtQ9nJNSn0tPX1AJ4orTU/zoYkVcoj6tAKYseSnoIgEZVKqVToMvqSsslSkxNp3aPA6DNfY2CcRLr0VrIVPxoaXV4xj9YvCNA/mRYaVsPGhd5GvZ7u6UI6rbeMxsx51U4P49TlZyPk3+DuSEbOhnCECmxaYzWntno8eNwzqaKVJHk/1sTDOuH2Y7wwHhBgE7RrvrFuWzjxbsel91Sq6S+JSpdvGisH59l1bL2VOxtqAoa52KYJqez7fiEd3ba7lDMz8z2+WOqZ2zkHKWJ7jXmrHaAnxlhhmdcpL3xVVHxZhtI59U5C4D39x5X24s1Sh+OexCmYictOsd/AV8g7PKGyOzQBTCCy4AcphfV4eiRqZxKTncz0J3AfG4xHqCgIdsjH1v7ayiKW9jByM65LAt6RI52oL7Rge8oqjSk13lclDJ08A/tgYSzwSEtd9uik7yTGK5qCJX8rhHgdxc8bDh5sRVkeSuU1Sb7XvTTNoJ1JIWAK5I4J/GJ7ZLN2O673SfyBiDDvG7pxAyCDGrlbGOOz1dQ/Dbsn0cuzgmnq2CGbsu0+d3jDE4FZBEGpy8heOyQHs01sqtpb7jp4a2v83wEcmR/af6BjjoZW07cw0zJeNzdd1LIsImgHjS2CLYxPtMTTJaWq/Mfph3tF19QXZhH6AYF644uqTJ8rX+O+sgXrqrlLpNR1obpWgwkOrQzvEVKOTTVj5cdJS1Ml4Yf7ZqCz2xEMgi2eDw6aYWJH3Vh5gZOAIl6oaN0MJz+YuaJoYf3V3CWYpUmI+9PDQ80XTp773bERRY92nbL7qVmUuO8ud1mSqFctUIC145oAwuTrj3PlzHq7BnCwmuymzvdcgl+cqVkmGurIFMdW838S6jHCZl+XoMb17KZY+nOpt3MfLVN9LIPcxmzyUUTr4ffzrvbj6QKj7qk/I2+5ZiVg=
+    properties :
+     x : 31
+     y : 202
+     width : 138
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         
+         PROCÉDURE INTERNE _test()
+         	RENVOYER bitcoin_core_rpc.getbestblockhash() 
+         FIN
+         _TestApi_Chaine( _test )
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : SAI_Résultat
+    identifier : 0x2423b7810583289b
+    internal_properties : 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
+    properties :
+     x : 24
+     y : 416
+     width : 760
+     height : 210
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+  -
+    name : getblock
+    identifier : 0x2423ba4205f8eae0
+    internal_properties : CAAAAAgAAABqzlQ9YfRNZpj5XtYxMjKhNx8wllgF1uYFNCzDMDT1InPNfC1/qt5Ko1Di7tLun1O3IgY2GBScZEvjiyyZ+gAbfIv9o4Tr8ZKU6bRRiJzm+019zZSy2WjRBbRoovjRziYjVfMJcKm6S2YvCT1+m1h2SQDsqHMj6c5TcK/yLo8c2hpFitMaD/n1cp7/Zc18M6QFBOT848gbjaLvBL+RU5NgO593PUZPYvdU4uzJiA5wOkcF1UZBMGNFTaAirvQiiw5/MNFSd21Kb0hcCoPeV/xAijdODijKMFh8Npucla//yeRxiVqSw5LLdUecD7TG3cDZNI0vS4oMj30rOZCkDW1LGVvOluZBjxJAW08UzJkifZ+zNRfpaAqO0CpJhbPywvLUGVmOP3tbf1554VexN6wbR2bpUzXMf5VrdUQYVe9HyEHUism0phv6cuquXjQUzm/Yk9BVTlh8lPpAsBzthf3HeZJD0PLKOrndekKBSYEkxvRQ3P08R1QiBjdn+IYU6BiFTWyXpVd3eqTvAc5a89B2OzDckFtQIE+fzEKeVn2ITkRMv4UE9pXgko8m6guBDQG06gGtLrXdVNJ2xvQnRKe5IKOL9kNKMcAK3tDL8i9JuEPKi2BZccNm7jKgqkGFrWPkB8GD3PO5AeUdMjWZO+kfRSyJHp1G9cft3d7/X+Iv3LGNKMt743kBNjA2JXcAYaOizmNLJTCyhUKWFM2aKo8QPi+mECELCB5Kr6QQWga3o3/vEYKYUwT3debEX4DE67JHDRshbYO5RtXolpe2/MyAth6XT+WSsudAjc6CfI28SEAW5VtsUMNcLtFbZ8nSdChvad0RORxkaF/sm2YpI+iDlD8XXoDjvrKFZ/Xo9PAfaKVTyPmzdOhHnSay+SxrwxVdJMAXRcgCfDseehkRgPVJ67IbX/Luj0tV+HLKj230UoFkUmtB1kV6NCkgU9J4bEUZyqX1UDt+73RTo49riGjrz2Xy0SEoHpu6jZ76MaOyRLYTuVtnnDlfB6y4lTaumzfPpB7zJVlfdg5Vku9Pyj6ZOiNwSqIMHqsUqP7NOOBzPTD+rqWC/EAn1BNSeh32oDd1xN+OtTAYptQ+bRPPgbdYnwTsVOKLvd+WWEI5KA86WR9oo92oPTjf5fRZbamD48Kzn26PvOhkhbILi7tXuo8rbTvJdo/ntBJHXSR5OjiuYy+7AToOn4V7kbbZQCVJTKcRPCijBOrevCIhANDWSirApjDKEkbyrEpG9buxi26aoOl5iH/Hwku5G1mMq3smldEXs8e1X2EV3u3H/AK5y2icOCGTu7VCg6e0Jsw37gfCNM3Ra+43MmGMZ7BTt+XXvPCtuCe+UGFgKBlsJJRCH+AJKHr+5UE=
+    properties :
+     x : 31
+     y : 233
+     width : 138
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         p1 est un UUID sur 256 = "000000000000000000054e5dc9d427a5ed7a53095120bda2e5edb99b18bc60ca"
+         P2 est entier = 1
+         PROCÉDURE INTERNE _test()
+         	RENVOYER bitcoin_core_rpc.getblock_json(p1,P2) 
+         fin
+         _TestApi_Json( _test )
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : Image_ERR
+    identifier : 0x2423bac60657ed86
+    internal_properties : CAAAAAgAAAAdYoREdJVJ4S6fqKrD62vNThg6GBFWcdjbvFU0MfB6nVrhiT+h4uaesqh5z4Jb4EffxwLf0oEWNip1xFZ4tOd0OFZZmkr9kW5EnJjgR3D9l4H1+MnPll/3vVS/evocmU0GEJa5BYUi5SH5BK8NlOipZNm9cBc5DdLQ0pxzB8TLk8YA8kp9tSPOCZUGhfiCK60mduXQSw0yeoNqEdpfpoQ4InLhi9Drze6YZdFgC17MX6VGGPcQB6F6dJJQejBIGEbE5Ays6/mZz9tJyvhjcpeGIfGfM6P+hNoRZL68rpIpV6CoSMywtUejE7mGM7t0y74BXhWjipSYipIbfdoQczuWUVLew4Z5H6142bozcTLwMeTrMzowMCmcfvavHyRyDN9S90eCgjvrBnP39NjnKLGy6AH68U7vSYCnbfz15btpjP5Wmh/Zbq7Ddt7e0P3O8kjfuQ53TRdRnNtS1JJrk+2m2cjp5cCAUMXbh3jJ6fdVolQmUVC+6pjx0rMppq8MnvfXymGF8O+hJPjnXJKBphh2xb9DpWisIR7EQBZIPvkvjn5v5qJQLhDBVRMxSDS524pEa23UYr/6n4yZx3+t3PTxLE95+XzD7SN0Gh4b9sD2/XBUQHCBgQb1H8LOIzO3UFDAJVEr/cp3kgc0SzI3hiutgZ3QjQ7renJ1wh/CF3Twqh1pgxcd3bFBQRLt5qZTwHTjDp8APXv5o7AKgMzBqNp2AG2p6QL/BeJWWk23/Xb04AACsvyDIlrvquZ5ReN706dKSFi7BvEpavvFvjGq5uOzQqhMTCo1su95Vote28OJVor/c37B+xmEeJYRBy8HRdTT4tKP9dFM3ihPj36WnukwVTFfIFTv3yvuqt/YtVC1D1fX4lHEqCMW3b7muhhzi4o8k+wiQVvY3GKiu2qfYScYW3KeraV3HgNpK6gY2emL2RfTLdWy0FW+FywlPqzh8035wlt4fr9sbkw2aIMatSAfbz9PSxjeBIWVkQU83wu49TIu+CNDxkZpBuJSoMx971ZBHphXs4XRJhdA+/BYMX6o/Y+FCrYp0ZczpVqinylWohd/W1ucKPIkKXevIkHLdgsYbbD7NRmHvG/ybQ1L/OhJ2zXZy77KRMRs394oxOJLUNzwZkOXAs1aJY+WNTEvcjJThGgz4k0AFd0RqpIWbPOMoorw0mzSEBDY1wc5p23b2iEHpDjsloAZhCigHsHJHf00k5jtAcTaLO3YvW0XwnqfHvjGpQf8e7UZVbmgHfR5p8u97yZBN8BOPEEXPtro9wNcwpCqp9Xc47ljd+txQ7aMpij3U2nr5b20AeJIjRrXFU4mOTDv+7a9HcCatn7NaQzY+zEyONDoWFIMtSJEHY9Utu9fIezqQEV2B8MCDse8GnmHzAyJP6XHRC5Ox0t69+caaymnEYebdXzJMmYRT8NXAxGyahcD9wLk/WJi+72zzf/+JnA/tjT1
+    properties :
+     x : 705
+     y : 416
+     width : 79
+     height : 69
+    type : 8
+    code_elements :
+     type_code : 8
+     p_codes : []
+  -
+    name : getblockchaininfo
+    identifier : 0x2423bc0e06f8efa1
+    internal_properties : CAAAAAgAAACNypEsDBEbk18v26IT4be1F4rOpoh+Sm9C3/OkptxBroxEUZhesjRF7q1XZzEqkYX86m65srWdOJIqw/wHjrBgVA5GJF0Ced2V0+Bxmk7X+JrVz0SoAW8LVuC60ISYjhrFLzGeuShYbyxA+1PC6gc6FYFfeofgDXiv/t5CCoCf6Zez/oL8VmI1jyotAUAs4C3IfV05BYMkcfPBYMW/bScd7Qon+owLbem6i4odfjVKznqic6++y1IfVQ1CjD5cRcVoGLsd4gpac8y3Qm3iIxmJZllCbIfjoqldlky27hXzEOj8CqO0uZ60S6vQFVIRTxdiWkwC+at/rCASA9HMCjgY2r69lEyzFAMUd6Xr5/EsCp/u32pNvq8tPreCEd5uHEYzRbijWp4X2M7d9g6HNev1Xtk3ypBDCcPcu891oWG3cqdi3h13spmVoqcILONVEIk1VQiIraTx6uPFm3u6WtHkjh0z7BQGrHkoMfKevLUtyRVqyU6aVTQ2q13Q+hwM+32Ly5gXwBR3kqSbpPnNSBKR6PXKFgbFnwOwGp+6WwOOIytkHW9f65KGkdGWEoQ9z9n7l1RrXaxNp7HyBcW9KtXan62voIQG9iYeZVHV5kfe/8wUQoE1OmNZxcTyHFGsi1CrWNnryUaDQO/awpC/JeVh2S5+35bX0WfEehXtvOlvedMsQhgGnbiaGqXFvqnGc3xM+KHwt1nP3gx975oSogW+XPo3mm4LhMVd4hRyqXFX6wG5e0o9EOJRZ2SM8xtVu6lkR2CVZDPdlvhQVSTyh7RtlvQNbkL2ylh3lpkOa5iDkeKqFeoJfKKNteyR4oVAIge/FWWoJDPLUvBHEZo6icA0W7KnSrvhrCgimviyXrYpV8F6h9Wxn42Lkxcv1l+peI7L9rY/xeHQD+K/Mmx8TIF+B3I/AAFdqb720xTc6XxMHzn6Du29ZHd7nWyGRuCotSENSQUyo+2MWluvlqYduIq0RMjfQnQq0B3QiCfDRAIL7bzk8crFDkevhczTJ0GyWUutJhxikK7/ET0Qz6thz1OIO3mfDYz6SgMpEecFdjlG6QacV6mB1wKSzKEBwRzyGCX8GF/Cm1w12mc1tuYxP/HDnnk5vQIcwgAjqRoaNnEg68Yv7JKyRB38PlV+xOOqgKrKvIyYS8AGnMlNCbaxe9vGQyls8XMu6Yyk14x1L6kz4iCAs4W6thzY2V/V5RMTEmh9vpaxLhG8QKpO8phgCJRLaOFVOotaQB7/FzJ5YrKFZKF5ck3sW6yRYdR0YHvapl7ZFOf9ehxyJiQcQs9SjF7qSEBblBamgBbvlZz7j1bbyFHNC9cod/m8wU+VZyUVR8Jq2fQO0TpUC9oQOzeHlkfNnN9X30LANf9aYYjTrjuKuGk=
+    properties :
+     x : 30
+     y : 295
+     width : 138
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         
+         procédure interne _test()
+         	renvoyer bitcoin_core_rpc.getblockchaininfo()
+         fin
+         _TestApi_Json( _test )
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : getblockcount
+    identifier : 0x2423c0b60bd02187
+    internal_properties : CAAAAAgAAABMDzQqYcerzUxttqCirs4W+YmMbBqLV+V8pCIa6bDrLQ6Esn5YjcjKGkY7oFvftZhyFeGKIYYQg4Lds2sn2gpStFevfR26N6VcdLR1UB3u3DtMY26nBHzkcBesRZiWb/fsmsrDSUVexw2TeeHFa8Lc6vJZ4zODYj9HXFOi7AQztMug2UAdhln3abw+8ImSVYhiiqqyWb81l3RPngAhdIT37jrkXTV8P+4zWU6bH8xGAXdpL3TAEmsPex9pNmdsCfmKqR8rUcdNv5m+DQFr15+u/uQ0kQ3xOm8BIiBfgfbmrN+Gt9iJDjr4NH7PzakRDjkNu5Fktec/uVZPY3XJVcK4RmUL8rUtyx3a8hA+XIQ1wl16NJjDboXqtMxwi6g++wZfpE9CEYm5prpPaWJRIv+t9wmib3n16WVUErU+BVeUcV3rNjagA6kYyU5/5W0WoWjscg+IcNpMexoOLcSYH9qV36VVRBynI1clEwG1XeVdQa+AlLzW5feR2gX7/UDTdqqHihe1WitehKnK/mBSjXK8oAYnGtzXT0OcJ0saO5sEjPCYI8Im1eI2rJzSdB6oDE6H3lDseLJ/LxOV7yXvyqAevqM77EQ7wtFFiA/jdAYgbqpWZvjdHfM1LG0UyKlqWZ3CnPptQaK1hBhOa+MISJhUETZ51JjfA0dxFba4rhac+gF2Xm1P4Bpq7lw/mTGNXGwGpZsVmIanNkJsRNZrOP2xRSY2LiZ1G/r+3HWSDMicgf/CT8uKCcxZH1v+Yn96iq8C6NxOOTjbWpLlUOLHi6IcEUhZKMxFk84CS1/F04FK+Rlu1OILujWcCAvv8wUCoUSSSXz7BBP+IKDKbCAFNF2oLwGxKpVNAWiVFJJ2tDsAVIG6tw6vexi1awq2y2XElHHRukdRxP/TdYGBkRujj2Imu1L4ZCHWy+DbM4SIU9WjRH0VdYIk3RGugWOZOA0l+IQ0SDGvDjDUY3p5VkYYKgrtwOSCoYmVIQxD0Eg2cX5VoH0idSMSirqgnQ6Rve4xL+OR6RSKdf6uStS8eSaoG6FYffrP/vILQDywSGsebZJEckdQXMwqQTUoiAx0vCNBXkJ5Hqo5Z8fT/N/ojdhDigngT5imfT3fOeXYaqZDHly+vQWdJ+dhBDo6Pr4ip/nO6TKcQQ6TUCnIiIB4lcN2PqudnP9/DrCQ+HNZtUHrcKDg5OYBcfRFsfL5eP3cvZf6cz5N9B9HeO1krP6dIen2QxWrZW8rDtHEJO6j/q2kcXyJa7lrD2q9DLz3g79gw7nDZa6V6/0AgdecMD6f8qwqpeW2mP3d8+G9mHgrmqimb/+GSAuVH4DtjVfpCFewo8yhXcECcpg9vm4VuFPPjVMGZjkYNX8k+UHkM/3bjvDE40intA==
+    properties :
+     x : 31
+     y : 357
+     width : 138
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         
+         PROCÉDURE INTERNE _test()
+         	RENVOYER bitcoin_core_rpc.getblockcount() 
+         FIN
+         _TestApi_Json( _test )
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : getblockfilter
+    identifier : 0x2423c16c0c23e5f6
+    internal_properties : CAAAAAgAAAAEU1qaA0+GMDfUYlcGlksegNyq+79Z3rdCb7znfbWqBUkqXAySGKg54cZ85FDhTsVNbSRyTEdDOoKVVt567Mgd6/fk+6bztf4Yr++ggmuH+0fpzrEev0Rv+t10xvtrhXnGKzoFn7XmbHCtWymbRGyKwXAX0WOaTMuLQZpmJ54OLWYZ1qz/a3/qtbnMlFfb7zuyAKKo0cllV4NqnP5uCLFBjVsMT8BuglDPGklCY6cdmqk4tsRoe+cstMOtqwch84cY4IyiCxmFL65A9ojzF+HJrWw9tFDD6rM6zOcVW0sy9/LkWk7OkFrFsyux9TRjGt8GIDqcsn9BIVCKLro2S+dnu7P54F3qY3Knu6gnNGvAvsWwOqGPVCIn+WtqqA2hNKbdchfUODCp8C384X0i3emA/XHvR1WILqd8kgM1QPAKvvwCI5JVQ/QC4mifX44g/VS+OcZHm6mKt0bZPUFL9P5qAhNim4XDFskLLa+h9oMX1bxL2djEyTZumz0wZBqpt1iVyCMnWKREewu1aLVoBpfdun3vtAIdERrshpPdNkb48HVeMrDgccGt2a6VAuZsQRx4oQL8SfPglN1rGaPWoCNO3HcptpHvvabrdbnADG6uQfH+HkzvvqgdRe5R/V8vyB1hnVh53Jx5TwzkBoc+VYm/I2k6C/8I4DV5iMrd2sBk0PerghskmuDNWRBIDV+noaDKxawnN1mmvg9DRgw1tqxxdfolTA3kStjDs1wCRkBUuOSL/yjAZWJmb4mQNZCZvt7LfXxNQ6wRu8BtvmCkciyjnuvl0ukeKtJbQCO1UUOtyLrLZD+V7LHVoVuRTJQyMUuXgrSbv5fmcIHaLVggSu1r0PyFoUXPUeY9iYHx6K8jgcFXmZDJTiLNIJ9p9qh+JwwmbSlWZlaATzu8V67zLI3i333XZWVfybi9KAOHn8FyASsnTSMyz75q5VwBauQ3QnSFX75MnTpFqEVpIKhUus01saWmLtar1bMzN49y5Nc78lWpQ1uiXSA/EJTWRGN157tLSWDJGVWwDlugtozIzl3c/Gj/vLTlv6ljB2BxqpjYZKMYylqFvZjNKNvBAiTYR+DBhcvjIw2jpvGouWZwexG13QKK1119PCFpEh/xgc9mVTd3DQHROgCuIkOC5kyygHW3ok+/QvX2p3rGr4qlHrDrzP+2WrNo/+kAAKozMm5/c6r3XgkaXnalE33egBcE88ZcfRgZxVwej0kvJuHqeYOHtmp/V6NUXDMVWo8nzq/xrAk3Mjc5RpBa41CPXZuZ1Nppz9Hzx2/sGw4x+D1p5oF8CkPgOzy4y1g0NbU2kV15iM97t7OXB1o0NKGGNgnUlW5jh1SAEjl6YFShnSQBK6vdgriCzCYDnN7HwdleU0oYo1Um8fY=
+    properties :
+     x : 31
+     y : 326
+     width : 138
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         
+         p1	est un UUID sur 256	= "000000000000000000054e5dc9d427a5ed7a53095120bda2e5edb99b18bc60ca"
+         
+         PROCÉDURE INTERNE _test()
+         	RENVOYER bitcoin_core_rpc.getblockfilter(p1) 
+         FIN
+         _TestApi_Json( _test )
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : getblockhash
+    identifier : 0x2423c3200c608e7e
+    internal_properties : CAAAAAgAAADtb83SFXoQmBbjsXKQ0y4nXGsb2wf1C/Rswd17672y0WRqPWNTlrfI9dB45bezpy0i+EX7mONH0l2fn4B2zt8l/mrQeRsF0Dpl3eGQude4XCmxsn+b51RZtOZ21IE9EznMv5waIwMLkRW7x5Ffmn52v8bhmHkJj16Z9cYDeVI39Atjp2795JTP4B/hUWUnVyEKnP4+q7VHHV33P77LO4Qd9CS8Oyv8QEhtv2i6fW40gSTxP2RMk8EBNuWsTx8u8vy6ZIl1NCT4nst/bs7eJEvSHfxoZIRe4GpfLoeTLSsfD0u9jouD05CV4NxgqZJsti3DIlsNkI9ei6RDZX1FYu2VOgRNTXWelFdpPh6LjulxmX3ndwtCC2MDWAwL/zecwyta5c9B6iWSBOXQUbSMC6ycHjVRtFqmbEkXXhpH9l3JIxAtOarJ5Nj/pjPK1ThcXs7fA3FyhbfYSA42S6+BA3sf+ezzmaGfFs0s6IlyR60w7n/47StqLpoIMsF+JQUAYLAfTVf57J52iE5MFBY4T3Ci9gS1cPo1YfEOXcGIqT2qqk7+WcA8owT0LkqI8uRKajTdhGYa/tgJBXVj1cs1e+kOYLP/2/Yr7guZUOc7VB6CRjgGBDYJ8YOfSM2ouJka35041ZwVsTK1nJRGR0vwWLgAIT6JtDhkqa/v4wiCqHSUeGUqOtlxwmyKQeecRBKcC5NtDAykL0/A4yWPkrCN5kN/twAMEFAHoQSQZouEnphrjKJt4HqZxg0WGg4vwRyFh+B78c+TNmOmobs+6x0DQwoeT2FjBpJX+awUBfkTmaPgAyPwVjhxRNPCGsWJCRvEr3YEu94B4lXEfsrsjvZL1guawSNDkMPX62VSkeIqQpebf3Ajoz/YFba/qBbZRrNN0/IrrViWjBfOKZsifNvGXKLAK53VyPrLPIWpAd1UB6G0RMt60pBaQjV1M6iTw/KjJJcfgvd8KAVvhypsru/miVNrl6IJfftbssJH9cMKFt+z2SWUk64v+tyImHG7DErYYY+G/ggAIkNrRqg/J5yvqDlEnjaugdt2CYXBOschuc4H9zYvBM3bLWsqVyVO8li/GZuFCQpXu1AWo/es7qBgo/TkHVirh9brzIgwg6YgSaFucRDZrUly/qYFbVWUMfNUlyW15Ou2MhNGnsYNBso9xyIm0WApvo43lz8JFV0Tetxkhj/w+xJGZ8E1EBTnBt7/C2qF5F1ubkpEHPPR6bE36iDXu7nCvxQla0sAOhVYlHcjjThLDwo1l20vq44rpTPZV8fZDGWS4YvS6CLTtDX42dfT30TFn0VoRGKVdCw6QQiLbPv+LXtwAn29Hy7ndBOC9Q7KorJMF+38Ssd2cYMItL5bNm/I8F94LPsHqpIpE6TGVQ==
+    properties :
+     x : 31
+     y : 388
+     width : 138
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         p1 est un entier = 1
+         PROCÉDURE INTERNE _test()
+         	RENVOYER bitcoin_core_rpc.getblockhash(p1) 
+         FIN
+         _TestApi_Chaine( _test )
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : getblockheader
+    identifier : 0x2423c3fb0cd4e74e
+    internal_properties : CAAAAAgAAACpUBY1extxfu1lK/k4TCSdu9Dn8tp0J7LMYA7wAvGosH/m2DeaSjT9+GUmkxAHRBG+03usHyao9UAw7mjtlWZivJRmKDfGsPe0ljan9rH9yaBLrp4ZPsD8q0/oSNaDOEoD3V3eeMmhgRLECZ8YDNf6Kbt0JAwwW7ArOdyEPuIS0fXbnrx4LaNf9ZmEB94BI3FpxWth1PUAc0U65JXDqMfNSR9i/Yhfl1ahh+qi3qxp4rhUp4AB54kxLpSgN8K+I4Z0konEMMIyisDIYV33Xjlc1+2flH8uOrdBKGoh9dESl/dQCYS7JTRFuGuYiFzyunr+i/xDm6Ol7ervxNG+cbh4MBkX+uXdPVlLbdYYMi0D9OheJe7ou+sd92TFUdyMMUq+kepO5bslVkwTqYqhIrj1DdZNmqC8f6Em2Cp6k3JQYdlhSCvjdEDAM/2GBc+q4h5UeTcmf8DbD7+kbVBdBkbyC18yPZi84QtocJsHx8e4LCuOvOSBbSiKa2D2oi2RsqHpuWX8bOYjLfU2ebId+8uXlveEIgD3Io885ldJsNWxqKls+4/ormHxczcvqtUxNdvcimsGpNmsan6BuwEOGQg1VNGwzgCEVxQglK3xDfLJPlyes0KeSb8M/YWoDH8OEBwZxz8Hu+ApjYrpluy/282w/Z2u4hvmgyyGWs+QYR+XaI1wC+qgkpaHwFt/ZOPVkQ9eQp8Vbg1K99iXPYC0tR8pNsT984F72zh3JPr4Y5UFJkllC6toIjfMJRI2H7MMIxiGq+j+r4UKz7C4OTKfj2VTnaiyPxZ5wl8y/6QYFYmhyA9BgDIS4fDxoKXSj84KjK5LzfGedcb7N6/fGOmlohs9jXSeGu0EFGavAL3WXUxg4AAO4i+SBeQ5BmxnreBjkG8CKJD8BYGdZ/qH9CtkABok3kixV4rK/7puO/v8rmQD4LCDQtltQR28YmFYlCBQOi7rsNygwUzWp2GHIe7pE2CvCfIhFljNHQg2rvmomnctjl7SDh6rULhghGRYK71km02EJb97SFam/DdsmBx9cPPm0oD4gcuDJMK7LIJiYLn6oizsS7H9r4FCGaZf/Po8bFAaeNn+DmWh6nasAJJOubUIOl4bXBonS9FPxHNJs4U+ZRDjWJqqcGbSN3gZQ7YTdawdBzuCjYFi2Mfrly46JzA9vpsijloKJVM1k42VAjoJiuyUYielzuglhR8CDNbPIrIJNSnV0WwX1Ptg6giMVJ1RyZ0v/Wy+YqmS6fTesN3+FUVLLlXm92psYyxAhv2t4Qe3gBN3baU6AN2q2XJUPENL0e1dO5bvQGlTWTIZVacNhUEUJsWehndrO3uVc3TvJFVY+TK/HG9OX49Rr7/Lsw90ZO3ZfJkSa/EY08tOcqTe
+    properties :
+     x : 175
+     y : 202
+     width : 138
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         p1	est un UUID sur 256	= "000000000000000000054e5dc9d427a5ed7a53095120bda2e5edb99b18bc60ca"
+         PROCÉDURE INTERNE _test()
+         	RENVOYER bitcoin_core_rpc.getblockheader_json(p1) 
+         FIN
+         _TestApi_Json( _test )
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : getblockheader_brut
+    identifier : 0x2423c6aa0dac6065
+    internal_properties : CAAAAAgAAAAJogc0Iof5UYr+wtQd54JgMvzhIZL7lPZfZtlXC/T3A7Myt7h3Voaw7z3VoOIVpNqbkX6pX2mhVY1tDmUp/qrn5uMyBDrTPVJX9LoqUuZNfhpVU41UOMYQVb8PUHdGGnUCXS1ZqAweRoy6iO0iU9DVfLSin24miywOnh9Nf03TlQLzJ/KmpbE5z8LzaSfE8/gn2UehodeiRTrbVeYwOt0qcAYJxmQjYAAxPg/MASDgEyPd9ZTDcnvzf2Ih3YgUu6DjvWX5WV0klAMI8e0ZgKYZmgyJoz5MIO6W6fWkVLktVr7+iIM3PPh2uq1vISbTfHRTUGtt38jGU8IuAYdPSVJx8hxN4IOnV1RcD7myBkXdWaMZMm6qYOnmourR9XBH+oHW/E4BiyXwYQ7YypDaYhQm5VmDQLvraESSyUjuG4q7AyUNbUFZZdlQIJXo2f0HH9PUAEYAw2mLwgf5kKZE4/qVxrHMlr+k+oP8m0TNOxUyxA//3Acd3g+PWipr4e7kWqh+QMrUQ7FU6/+5dzcCALt9tUO2k6+WGoayqdILevL96Pa+AraUE3m1DeT4q7i3hU+jBu5bVYJgMHAdlY9eFoH8GBUgHd1nusf6XdO4j1F24AyBty4+yDCM1wYmrAviSJcskGvVtjmBhH0SOeIM8Zy3qTVWkBkosZuONOacv5vha1V8Mj9nw8nd2LhFqcCbZax6SOE0s9UrItF1BmUlBehfXYHeVbkgz5RMUYPt7EkqKGYm6NG8YSXw4OnBMloIBizbJEWwH1iIa1WDEINsu1TVVJbLHgKwFNMLqHVn4mg+I3nvUqGAFCoFs5XHgGNiISC/6bIZsnCqysaCxnv7zcDXpmFQDnMp6IQQhmHdcppnO4uOWi9jmb/fflfkYYTl9O02HpZ0WFeg+fCh9npGUXU2aV20Q4ALGG10Q8xcjanRmN8HOTtsxdqZ5wiHgAXmuq4VqoEOguxplecHBxTIFEKTCXy88tXgZlyVDFJUTp/nBzpFH7kYjgJMV1oqk385iBVdLpXH7oFt+CDs4UPYVyMCSog19URfJlwYiozI8T/fTsEaqle7BWnu8t80HbBqKtdV3BzYcnYYVj+WsE89O7UmM6fOB1rdMV9tTg8yOsHCu/CFMuNJkYq5LYDXLr3IO4VD+3wAwI0d9buy8oHhMWeqAyY2w9Nl6DUjLrO4D+mj6gqx+LSts9fEn2ZRfLrMOptAcdUtuSUtP+p4W1jSyKpOhCm9VU3FJRPKEtQoXayTubPheOxXbqFfHo0eQbM8tbEbnIg6qVOcYf8YYoowibB91WutMoQ6SwkgODUAK9JJPZbUPl5Zo8lHiixKjthegt8C9tqWycBFs5DQGwqaWSA2RV9s5oy6ROTop95VHylJoddRSM5dA4PsQIWKC2wRShwN
+    properties :
+     x : 175
+     y : 232
+     width : 138
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         p1	est un UUID sur 256	= "000000000000000000054e5dc9d427a5ed7a53095120bda2e5edb99b18bc60ca"
+         PROCÉDURE INTERNE _test()
+         	b est un buffer = bitcoin_core_rpc.getblockheader_brut(p1) 
+         	renvoyer BufferVersHexa(b,1, 32)
+         	
+         FIN
+         _TestApi_chaine( _test )
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : getblock_brut
+    identifier : 0x2423c8650e3b24b2
+    internal_properties : CAAAAAgAAAAi2gjDFsZuSEoW4kMJtizOl9K8yUbxTwwF98EMaSlu7ja9V1M3xvADOrfLL7ZakAZl9L8309NWGUCKk7aYSTby10bBEjB9UnpMFKu5NLYGxBe7k5WELMzSu6CGpyCQplstEfcW9EGw6W/tYysMOJ40EQBjCWVWpOSwyHlZS3f7XmguVGQAU1YeBjTAdUw5yvdKZFuH6ukxV/6PZrJPNUKiIEuaUahCQCnv1Bj585uga722XsfVjJVYHSUO56YOzkLiM3YLUs9R4nOtgSc6W2aG+367/tgbiDpIDbXTFKkOI1PNHq0xlUKw8VRw15APdZdS432/Z3OOw/x4qoYeK3qk8Vostdfe6XD3oiqCGZ0yeScyevM7KMraq20ms5T7JHQkvzHFvO6LeisZS0EO2oB4SZIqjpFdtVkirsQ7cs+S7hariN+Qs8nuLhkcHigMNh40v9MGDlDf3IUkp2anP/FSrHr5AZdlj1BbFJZ0xu9JYg62baN3n2dDQhoABDviSxGLDC9W8bIj+94bqvitJkS3D/+zjP+L2tAUACItLpDL4FmGim1CFh7s02U0DCJ/wBtNOb8NTVaNSb/i+gt8zJjuEzVBCTEcb3txIz4ck2TrVKESZtRsFan//pfznZxu0fstNSPCOGIZhUQJ6EmBQVz1w3iOHtACGeXX3Ge3s5kCOfQEaUQ0z+TsIgEeih1YaISdjLjZPSGdUjpB1CiIFgFzFVcXNtk+/92ZZYcn+9mjO8woghQy7npV+hdQy17rM5VaNFc8A+Vs332oYH5CRMzG6BqSgzf7INVtncw9rHA1LqcpA6wcCvPHnQQ3Qy+AI3kRhQx+OX0GWNhRWVPhXJiAc+PDNkLqAgvuwgSySRshPS2TTdnJM65ERoDGNKEHaCkAPaPxQheQrZx3/K8BzckpWNFixjRyV1GFbNn8w7XMkOgdMyxR7RD83yw3OnIY8qvm7G64kpfQTYEAigIVemIgzkVwUYvfWCnh70LpNwQt8Cj7L+HiWRJbCqq01OrAh3+jhKXuLr6gN7Jm9s82McMYA8s4ojFgse6l7fwklqgVkZjVOtYH423rO1gER8UhOLyoYCOCrehSToKf/6FHcMEsbQXum3N7IPWuxz9BLLZf1bLbf9EQjmbebiqIlbMUbgbRpN6zTtFznSXw+1XKmhBhbxCYrK1eSCkKr79ohJK6trw7PfY2YVJMWtZaeubX+gxXqAUalHXyK5Orfp4qD9QbYNU+dinLXINhfC9VGJsJI0ZQNJtTpaGHEzIsRfaWYObI2dcw7AMtUNNAmpA0yVmuNih1z6hHjmiKih3K4bWyJ56P+DwXLkLzFSNoLwxUiuKLpzSStqI2cJYt8mQg3PIa3XNxI6bHLfSEsFqH2d/7KCTyBGf1MyBqjwY5VPBXzAkQMMfWuy2CnMBkp33YJZIR6L2l4tUpkBSV7pMlHSq0+rKWSvrrd2/r7Uc=
+    properties :
+     x : 31
+     y : 264
+     width : 138
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         p1	est un UUID sur 256	= "000000000000000000054e5dc9d427a5ed7a53095120bda2e5edb99b18bc60ca"
+         PROCÉDURE INTERNE _test()
+         	b est un buffer = bitcoin_core_rpc.getblock_brut(p1) 
+         	renvoyer BufferVersHexa(b,1, 32)
+         	
+         FIN
+         _TestApi_chaine( _test )
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : getblockstat_hash
+    identifier : 0x2423ca590ed2c370
+    internal_properties : CAAAAAgAAACdgjapZoqiY+4ESiUhL2LrIjoXnMBgxvpr+oVcrSQ0dMuU+ULNaJsWEaMLZY232VN7alWunItp6/VQmeKJ/panyjUu64Tae/JtEBFZD+i+Ryxx9lrJe3F5dTHhPUs1ykolj1RNJCPGnHaj+beuLVPMHxHeMvp4x1YduhNkXMakFTWkxAaNnwsvIgmZBml3xl2j8KflhCj5IqNjPgoK+qngouaDbbaEQXNkSlxPTbBaof8pgPvT5subELyU6Q9U6/qvEWpWo342wO8j+IKVuBcc5p9DtEV+71uVceDmjw5xoK6epjJo5x7//j+t75lordv1V/1bTVsQP4+dvyapgux+PtZ+VbmTg+7y4d9lvEZTnyP4I803TSkvxK++EMKKINlXXB9WWpk3cG5o23nlvOydRs5dogq4ppzKGdPAbC8QsEy5soQXz/CCzJ93Iw4DDTOPXYldypwUgPKM8gcCN9x/SK+6imN4tOYXrAwKcki4ZvKb8XAyyRMwtthqRR3JDlR5ry81fNPyGJCd4WpJRBTuKp79+Wft7gNuUifPSSCSpClgKHXCpPFgAletoWpqWuLzkh2Xh4Z/qzfvXil9doDGhtmElcqhNo09zN8QOkHr3Ur7HlSLVvBJRcqZz+JAAz8p7zmAqsnMgeoZcPY8KmvQ/UJvlUqc/sfPYRfaBSlIbo8qM6rwr9G8dpcprjpFdrHnP9mX5TvC4gnIZ9s+9dynu79TWU6Lx/eI5aQDSwtsks7IWz/leDWTtjVgMMtm4kA12syWEC/aEg2bLjxbU+U62GgU4PUUROwnIvDio3LS3FkNA7Ml0w7wqa24gHZIQubRUW+wv9h/Jl3mDYe92LbJRiln5ytpf31CVBKtAADpLnSTNPaAzT17mcJUhktnroM6yi3Jy62NxG0+RqHhgNh+oqcm4qfFm8FgOmwcFsL8sswMgqN6r9vu+SKVbFdnz5RwNYJW3lGCDxDq3J92c+AG2FKMk78XEDaN0oDYLMmmLKauu+35QbTwPxuK2YhKSgBArbWxTRI4P3caqg0e7p7OvIGeZ9w4QV4/mRczo3z/uCRavj5N8X+7BaIaXdwYTvfBoUpNBMSrG164pkHLgI9Vg3PuXRNp+UjiGBDCIYIpAMJ7xeGg0trWhHPd3oAWf2UL3/c4FpO2f+h2A5UC/2R5hpwVTF/B1L7ZFtue4CpEtOdAB1h3OY2RR52/3rVeteofoEdTJZMHPmO9zGHWpLWgKnt6LzIKyC08OI0310Pud87Kgo7pugU3Krd5L9xE6aWieXiQsNz6tgUeFShhHxbzPf08EEXJ40hM4NqkAoJVNWA6vWItkezpJYHyt5M2KPJ6aM9E+CGy3YeL8/oJKfefDLRV9Mq0Zh/C7C5Uv7gY5uQIJRGV4qEQX/c=
+    properties :
+     x : 175
+     y : 264
+     width : 138
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         p1	est un UUID sur 256	= "000000000000000000054e5dc9d427a5ed7a53095120bda2e5edb99b18bc60ca"
+         PROCÉDURE INTERNE _test()
+         	RENVOYER bitcoin_core_rpc.getblockstats(p1) 
+         FIN
+         _TestApi_Json( _test )
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : getblockstat_hauteur
+    identifier : 0x2423cbfb0f1926b1
+    internal_properties : CAAAAAgAAAD1PqnA2/Ul5Tz8nt/4131nmRZvFdxo77wgIgzhEYdfodisYeaFkIrzgLkzyQOw0H8AaYsGz2C0s5wL4cjcFmFHHVWuToMO0h9313Z7ab78xTi7L4OMs+eVVyxjKGpDQEVz+n0XGCOtd4dC/+xurEQjrbiU7X3P1HaJmtqx6kCCE/VBVyNG3uq9TAuMBl2ztrTK482m+sKNTg+pDn15kEDI/3jABxTXFaaSmj9PxMAXoXyX2EPKTKsRWWWJ6zNWBkADp+vO6OeagvjbbhtXUXskJjPiwR0cDjEFqtQl2vey+iU9N2IGmfjUhIPy4uCjxGQak36zk9Z/q/LWcId4zH+hJx5thIJiNDLAyXgAz0c00UIvB6+cCg6QbPvR9dQXwqYDLmQEDB0IH5rO/ZVW25TspVS9qyNSH9oRpUj/KqCB5jM7HphWvWXfcov6xQcXaKszTO9JPfXqML5WAZDxTcQtwSnLpT7maiuonK6mrv2+AagglhcjKPcW2EaCP2pKYA1MScj2IvFzMNUVJYVDEsA0ruqOvtJy5LHCUcjVHeKcOGHXPJ6J4AbPyl+Cj3FS0DA3gkPA5XzDVuZD+Z4yD9xgPgSvw1y2S4ynk81fIADIDzdm6ec71BWSIGw6S18p7/gkdGBik+6baix0jSJGDMgPqE1fKbCKSgwaQftQKmTL4z9vBnHHwzdAYnDbVddw9IGhmmeTrfT+Hx1M1jF+LgEJViJzF14iS7YJ0+NBgbTJ7vFBPy11VZOsxRW7mB+5a5jWyX7qmPyiuVZFR94TGgjSFVmkJrOIG/Yr56/ETSKEPJuZ4G71h0UCsadr7FZNJBoGjuTJV6IG24FwEmkuMeo1/SN+BJP8ls/ZHPF7p/kAneDL8OsrNzwCHWR4MOnOXvRprjtNl+JyhyenrzxN3us8j7JUWpUCEVkJdHcp2nLPSBmm7RRBqYn+LFQKQs3nb3eTpZJWB6g81BShJp5Ocp4cwoOasUx+gru7LMgCEjQLxdpSoAtzdiK+gf+2FnW5kTfBOjU6foRFVo+Xh9v5CACnKTXoE3uXPw6eFH5EmEOAqo1RKcrJKru843qBgC5QXJhYbmuRi0CyK69z/C7d2efushPgHPE1tS2ohQYlKuc85FyjTRXFaZ3qBj2Vm2TM59VOkisv3G5G62im0rnTm3MP26hhfsW+FYvCEgXmMWcVSw+cEdqMMReONu4VNmRPx2Ci6U2YdyohMa/ZIDVjOkBTyp0ZRZ1Cl+FW79Si1vGo6Gu+641rZ34eJTY20BwF+dgtYHfHNVR7Wt+dX5T7OQs8KCZocOD4upFL5rrwDpeEpvyMbiU3eniqueQgHTLiQF8z/zORjUFeF+gMQjWupcUi8kJcM4+zXNCyfT5av3sPVKkNybE3gIjD5335dvpwRUmateRm0g==
+    properties :
+     x : 174
+     y : 294
+     width : 138
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         p1	est un entier = 123456
+         PROCÉDURE INTERNE _test()
+         	RENVOYER bitcoin_core_rpc.getblockstats(p1) 
+         FIN
+         _TestApi_Json( _test )
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : getchaintips
+    identifier : 0x2423ccb30f89f35e
+    internal_properties : CAAAAAgAAAD86VOLGMOoyncTLKWeNsSzuuwnnHG/ZjfQU6qiRRBaeupWBK3OViPw222dBDHUbIb0ejhgaJduPtCFXmYy5dKNhrfZ3YWc9aitN5mYiRiQW5jGzWUDWNWft15kjN+S7CJXPTl8NTtenZklM8huejBexd+lAHndCMdOIU/TOgSTnA9QxXYquCf3mRPqYsVc6srNwxiPUjvlWsc4k83FY11sd5n6s1nUfE031tdeZR12Sf7ic9IyyjM5iKRwA1Nt0hbf4m6CHIAW1UGcz2dsrqtjRnF+OOjbQdgcfsc8pY3NnTjwtJyAwKvQuI347nwQ0zfpTzGMSIYfzsG+IttZEVtqoKSXyDcUeGvdIQBRpm8ue82NkFs0H50j+NTj7aU2GeRl81L9Ze6W5gs6RKvp2FKkvk17ZyXFEVboDK6Z2mpbsoiJLc6KRYJxgmdtYaAgTZODKHbPy8EwPfggD/6U4p5XfNXgAMEyW9X47KnCAd1Tbt9MKbeLleXW0skn0QPGiBa0vNHGpLmEDT0OL7antrn4S8wq2JW552hqCQU1heR9+AGXTgIrbd3j1ZuIoDPNiGO6x6Yor3XLtr3Kx5R9Ppm2Cg0uTDOk42PHGW5QOu3mp63w1YhjfqI0m9Cu9OB53oM51iVu48fB65sh2xlqsa4S+6+GTURdw47ovTdqTZ/RdmVWFtoJpwncSKv/pBN/PtgqmCUclzyiMHC3qt2Jbhcpw0+41x8foj4oGb//8nBD5kC6EHMC1pZccCer3NBNr2iFpusImMrXuNiceCkuvFtxkp7QrMY5WQXRM7jBfEyRdogEe+gccQPJxcCQinWuYUGTe7DDA6/xbsZQ4TyIlvus5dSmfcSYFxQTP4RAYiTuRpUf/9hBoYWV0Nr19o4d/gKHMo3XTbznFGFpBCudWVR4OcvcAyOUoU3Dtujk1llQsDirWe6osNGknz1YToUSQ/STVDjIG7ArKWWgw4tGBuF119fgRq3mNsyPsfbvLOJ5rCbHsdYILWBZYZNQ6BBNerDJbLjZG2An3oEvOQYX1vDnhrrt7JFdNG5O7DI7uLCCfmnGXPHpy4z/2iUdbhtxQHUzjOmXSKlKAN/sQaQwq71m2IrO/vsY93gyeIOqymy2GDFk35ZiRwLu3kmoslW+XJ9nLVnnws6qhqtIXHFI+NvLFalw+clMkK38SWmzyk6Y83i4QipP9svk+wtO2Q1e29YPtLzlNNmgsyR/XaBqBUyLBQchJSV8fMGp2sqJXoJwaVa1yAEYgxaRbvSjyySscnAmAy4pTbtfOri9g4MV9j5xhlD34MOMqjMIc5d5mTKR6JTBSzO4olTTENYwX300951X7j8fVJkreNGZJk5aua+APOUl5eh8h5ZM
+    properties :
+     x : 175
+     y : 326
+     width : 138
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         
+         PROCÉDURE INTERNE _test()
+         	RENVOYER bitcoin_core_rpc.getchaintips() 
+         FIN
+         _TestApi_Json( _test )
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : getchaintxstats
+    identifier : 0x2423d16f10257325
+    internal_properties : CAAAAAgAAACb/nG/Iij9o9ppsYKV/W5BEVV3qpzYowSnyqGUktonllhJ/7VF69HyKgHVjeka13Y8XA9TDxp0M4uMT6czJZEW6vbn/K2COmOtWqid/0SwxL7wybIZulFE5/Cp+4QcUqsfTLLKQ5leSF5DD085GmLwu/6JmfPSyFdd884AEfgQl/An4CRngxsG01eMQoXpKT1E/jgUaUFhQ20cIFRoyrf346UKu8xifrw9cHFYDYEHhJcixPhcP1ucKpH1eYFfRbEi3rquP22hNyjCmuoVqUuDS6a7EMy3Yjugmjc/TaEM+YyKGOJ+MPahCQlB2549SJXA1uSUNtOtjb7I+kQABdFxTTEHnNm2m6ZleXR5hlmqcIv6HNEzUGrLb5HeHj8rEjTP0FXoaFB1OO/m+V9EdxMy70cJZ9msNk8CSHe7zjK0qPqENbpJt3CCkHY3wahOqyps64RbS1maUwSfceeRnqTYWPXYxwHHLl3BO9M3BGnhj2LtX2QI5dYKQcuYhgAnGVIfXpGDgJyoR2XnVMdqhE3j6L8ZRM7x8RYGoP9jxLA2Pk+0TLjwCQ0pb8R5wKRiw+5qB3TUEUOU+H/NoeWo1kXwYvkXIqGPixZczcHuSWl2JDVwhJybfOwpNzDJp9HdOu97Q8qZ+HAV67YmJv2kX58lGVMUG+tMbC2e4xTBLuCkcDeDtqEW9IofGZjdmtpc/E2TFikMPsIfKeq6KK3o4492duMa5aSdD196ykV/7aHz2YEgHAnHDgdFzhSFFrNOdxWWmB9GtfLY/TB97jeNQ3u8OwAic+iPp0lSY+D+5NCc6dvkfQTYIfqcaGauTZd/sNQY0zVoClynqzzRkjkDv+RMNaHmnjisKoGoZNKmf/jezoLIzrHoHwdo35paw6e/2rHL0rYH/U91Qu7bkGOSzTAH5GLMHoR47l80owCQ8mbtzpygPjAFvJ9NGAPOW590BalWGKOtfAsS91S89ZEHP0xGJtqb112s4v6+1qAHY0DWb6ZC6CSRXj3aLxfLfUaKPixQZum+HMo5mVZLQ90rM5SFDbm8dQvexKz2mlV6vXWrqeSJu1eAKgm0wy6yH1OB8n1yPnBMqpYYHUh7ilNndBySuvenGByuWTzELVi+sGhNvgBASrIAe1V9jbZ7i/srH0YQs5CsXRInTk3xOC90J6fcxfhnZwbNWLhzj6ckTYMG9CfEn0bdY2+civQjeWqRclfNvqmOEIlfFgDOQ1q91pKAj2t4zF7h7UJ0nURoSeTA/TMRtLCwzyfzSPUkwAYOWV3qSFp6TuBbiLtupUh88/Lzg8RhurMBEiHNni69GKa2SzDkKMKGEGE9Dcq//dAdwhmMqHXvoboJ+e2iFlsQ9MDgj4Ub140Uv0MIfua11te5wnI7nlk=
+    properties :
+     x : 175
+     y : 356
+     width : 138
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         
+         PROCÉDURE INTERNE _test()
+         	RENVOYER bitcoin_core_rpc.getchaintxstats(10) 
+         FIN
+         _TestApi_Json( _test )
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : getdifficulty
+    identifier : 0x2423d23710788140
+    internal_properties : CAAAAAgAAADlV8WaTUZeikz1e0Re8WBJEMHZmcQ5K07oza35p5EYKLSqAcNbTuH4vSgZ8cPfoZ0AZnNpMLBJIJNNZ95kEDVng6jKP3PN7PD16S18JaP+CFPrtPpjh28TyCpO1IEdBVWVKg4JkagR3uBv5YPIwqM9WE4Gewg6g2cwIFKxtBC7Q2DPt0H/w7FzRxfTY3+Dx7djhkh/hoRWyvmElVhUOMNEzQll3c3qtm67mQ6TR0xuH985N5wgSlP3jy9FBheEYW1a6YejwQ9dz80euWmbV1fKFjzcQXVhCn8tOnTvWXZ2GAcuZ0BxvnIAAJZLrWEpvk29U4mkbT9/8aoPV1XpFbqcjhXDsu1F403ugrQOZNwdtjUypGBj9jUaeGxM64DG83LHZJc6aQkR9i7f5ZJB2rfRx/kyR+E98d2IktE2fXc0nX3bznYAQ5E4JRar/Q2uqXQsotfIEGIE49ZWGVQI78qRV0W9nISH03epM4UdxW3VzQdY1DxWZTchxt0vpcij9h63AreNgispF7AgnByZpr780ctH2hK5itySGwJUXU0CfifGsBRwr7l2WtKrleg+Cqwnlpgurzomxe3A0kxDRpnqjjmBURQrqlXe6P1hHlAYRF4yfnhji0Eh6j9GCvMggVu6r95/80QTVlYQXdUq9sKea+hT5tIaZC+BadaMcpLwWn3C4kkDlMYu/GK5Rx9nfr70C31zDnyRzKTvQtDldnePQ6SkSIgz1TwEqtMMHrCH7EaJiAJRcrG+XsI3Kbw1aZYRf21xTP3CWJz/vuxcWtmpejK7AjedNPcfiQ8IhlZHNpYNpYmDcSCHsSGRNdu7dv7wr7r5FlJ3jWB7V21oEU37MkILGXYETMB4Pji4dlGeqhNk5aixDbYnZXRcbcei6n/bvEWTVlFJj7tLV11tFSgUpUTeTgtweRIFrbpCDQPxCocfC2Q2148wQ/3HKj8bhiJWatcBWALCtZQDjAiiePibah6446sfl5blSpaAsywLhj/sozVctOBKN6hP79hPXbnrQ/qUj5isrBY2n8iKIb/eh3xdYIy1/n7yArmYZ+Dq8CGqKv60U2uC8mYyjsWH1BCDIJCLYSHJ9hEaKwq9OP/OmfIE3++BR8farJyF2DK0Q0fP5aEbpnicSEgoucvsPzDYleqPNEXknFzb2MjzQCyROeNL6fcsB02m35ZPPR0VAksmB8aaG39cX5RIKQSjzcvNsMv35ePCA6OhSL16rMp6e5qzdSKjCzDeivQRJHN3ZCtWANkE4FJ42jw1w55mOAyaXTCfNl6NBzv0R7r/wvDH18xZw+E2FqinDidvMBG4bUDLfERJFglhu4hFpsXc70B7O9Wpam75R87V1mcsqEaNKOmi4mlOHo3t2FphS5zOXQ==
+    properties :
+     x : 175
+     y : 387
+     width : 138
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         
+         PROCÉDURE INTERNE _test()
+         	RENVOYER bitcoin_core_rpc.getdifficulty() 
+         FIN
+         _TestApi_chaine( _test )
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : getmempoolinfo
+    identifier : 0x2423d5c810a96d47
+    internal_properties : CAAAAAgAAAAqQivzSZkzDuS1zj1ig9qMKw285WFhTq5gHaMA16Bq4JBykHKEXfN33i/+YmZd6a1S7+kWnSwRAwJ3HBA1ijDaqXZGnfSm1ElvetCkd0OSe3X0Iry5shzrv5Mx69GVrCSky1Aj8CnzL/a/vIg97vYX+4PoLzc2Zj3n8+YxCrbcbeVmg9QHSpIAMqpCVUW66hv+v5JHNG+QXtNr290Qqsewp3U+ni83ILvCVUOAaEnEseiHuZlfDCtwaYvvXWecKWzKUhLBWy/NbM0rZJVPbUFJ9rS1UonVpbKsq7030yl0ENBlwJz7gTDdIY5RMQoW0bZIvPJywkQcJqaFFntfVi8/85guJTh6I14hMmW++HintDyecWte9QAZ406gMC+TWc2t15Freg4uxQ/mPBMHHvNH2gEC6Q5DTkZoRv+OmzOZSnArd9JOli8qvGG9kslUMyC2ViOgQRg1EcyZD98zzoY9b2AAD2Rh1/g4Ae4uUT609fJ7oHRNZoPzgM1N1qDz0K35DZ+wgvHjT4Hw6lbg7GypdHt9sTuBNB8RqTAZ2h98cfX3EakiluxK3REkS0DwjK/e4AfDyBeX9+0SIhrfBJL8v91bp1TFnI47mX+9uRRsc+QG36zRB3belC4jnefHf3D3u8pYgKKP4+lIT2sExYjoprsgwREGykM7wt9lfBsunQ8h8hKh1bddvst7Fw2+f3OWNRS7dQSq36epfykCjtWpknuacdTc9RBLQhSNA8rfRo0wPC3JI7mwJXri3K8XLzgawAdI1PiCUyAcBPte2Rq+QpoyEjAh2UD3uEFoFGfmp/hPaE9Ac98KRRzNW53+U+tSyU+jiyjKrvLu+yfYvHZSFGwYg3s2yedoTaaUiPrRret8yizIy0cA5RXcT2/bpXCh+lBxyfO+PJtCi4/PpHnbu9IBco7qlmffKKzai+RwSTfPsLBx4WZdJzLFVnWEDV3EOCJFAbaNLuw0kpxWr60uEubTgfBzUgEj315udX8Y81nmtDtpaiFVneW93z6mzigN7cHuupBTg/qLC9IIwiaVT6RueOc3I7t0a4VWD1tfD6+4NXw7L1CRfFd86ttA4+trSK+bvsO4FYGj2wgnv4gF3Z6BKUxr5j70V7ItrGfPmosbjlHmnjmXhJ2S/YVHiJ0wze/5J2G3r8IYgO77f3mofznqe5TqQHJQ6vBHidosZ6fatu4ZikdqMsY1+snz5+EynQdaeS5AbUSjwY4DCBDc5m3Rhs5kuSRFwK/EpRU33OaZUgYSYXUTJgPDlPirZoBihKHOV/c7f2C3SqRfJk6+jiOJenbHd/YobrMZzocOyGyvZ5i87Aq6SX+ljJPdEmubuwiPkViwIHig0sXg3WWCrnoP5comBjrLF3sloQ==
+    properties :
+     x : 319
+     y : 202
+     width : 138
+     height : 24
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         PROCÉDURE INTERNE _test()
+         	RENVOYER bitcoin_core_rpc.getmempoolinfo() 
+         FIN
+         _TestApi_Json( _test )
+         
+        type : 18
+      -
+        type : 161
+        enabled : false
+ menu :
+  name : _Menu
+  identifier : 0x292573e513b5f221
+  internal_properties : CAAAAAgAAABj50bam+HanoYJb5ITPSayarsDFzj1ZQESGcBwNGgD5V+OmfWHgTBoAVnVHtZzlkbmaWBEPSkD1T9cILvWwfOahVouXjSfqan7yT5p6fcHJdJGdlcQCSy4lNHh64Yk4APC3nyv64NZs1UjQWPhzUpgKab94OK1vexarKDAqgm/ULpBW/RsZafv+wxYsL5taIWrRPmFLfrQliNDMq5LE0pobUZfgtz9dq2FG2gKWaNaREASdSCUJuABCsD9FZd2xt3HRzzDtZkHoXm2/gsii+mYcPm0kvDkMxKz3ysJXS80+l3RK4Jnk04gTOXHMzlWYUp1UPTOkqyKm6zwC8QsZlznyVHJ3XpD+qdpsK0czdu3FULbvC85SBXxfXQRTvnBWtD3iN2SH0HoD47ySGDNus6Nig9djXTc2ynmLeMcRhAFE5Wk4kh8jJdTxXFzYJV4L2W4MpOUsfcJgvfaNhnvM022NYvR1VFKt+2ZgQ==
+  options : []
+ languages :
+  - fr-FR
+  - en-GB
+ popup_menus : []
+ message_bar :
+  internal_properties : CAAAAAgAAAAjFWXItEk/EPvcbGR+hALkgRfdOpVtIn+yZNxHnmSRFJegE/AnD2HbGAaMfhGCqfzkryHG9FVhjtF+iQYkZ59QBQ88Okhh0vjCoVhOagox2hvIqrJnU30QK15/ZA==
+ actionbar : {}
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1+
+      PROCEDURE MaFenêtre()
+      
+      bitcoin_core_rpc est un NoeudBitcoin(SAI_login, SAI_MotDePasse)
+      
+   -
+     code : |1+
+      _EcranVersConfigRpc()
+     type : 34
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1+
+      
+      
+      
+     type : 2
+  procedures :
+   -
+     name : _EcranVersConfigRpc
+     procedure_id : 1451204161524873622
+     type_code : 14
+     code : |1-
+      procédure _EcranVersConfigRpc()
+      
+      bitcoin_core_rpc.mode_trace_http	= INT_Trace
+      bitcoin_core_rpc.user				= SAI_login
+      bitcoin_core_rpc.password			= SAI_MotDePasse
+      bitcoin_core_rpc.mum_port			= SAI_Numéroe_port_localhot
+     type : 458752
+   -
+     name : _TestApi_Json
+     procedure_id : 1451211810863802061
+     type_code : 14
+     code : |1-
+      // test d'une api qui renvoie du Json
+      procédure _TestApi_Json( fonctionATester est une procédure )
+      
+      MoiMême..Grisé		= Vrai
+      Image_ERR..Visible	= Faux
+      SAI_Résultat 		= ""
+      
+      resultat est json =  fonctionATester() // ex : bitcoin_core_rpc.getblockchaininfo()
+      
+      MoiMême..Grisé = Faux
+      SI ErreurDétectée ALORS
+      	Image_ERR..Visible	= Vrai
+      	SAI_Résultat		= ErreurInfo(errMessage)
+      	RETOUR
+      FIN
+      
+      // success
+      SAI_Résultat = resultat.VersChaîne(psdMiseEnForme)
+      
+      // test d'une api qui renvoie une chaine
+     type : 458752
+   -
+     name : _TestApi_Chaine
+     procedure_id : 1451214692789232566
+     type_code : 14
+     code : |1-
+      PROCÉDURE _TestApi_Chaine( fonctionATester est une procédure )
+      
+      MoiMême..Grisé		= Vrai
+      Image_ERR..Visible	= Faux
+      SAI_Résultat 		= ""
+      
+      resultat est chaine=  fonctionATester() // ex : bitcoin_core_rpc.getblockchaininfo()
+      
+      MoiMême..Grisé = Faux
+      SI ErreurDétectée ALORS
+      	Image_ERR..Visible	= Vrai
+      	SAI_Résultat		= ErreurInfo(errMessage)
+      	RETOUR
+      FIN
+      
+      // success
+      SAI_Résultat = resultat
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAAB/E2SZRb9VnQU5+PivybZwVafwXhgCAWSYftdyjxWxFx7cb58ydr0ud57ZygZVSIIWCI/Me2Ok
+  original_name : Modele1
+resources :
+ string_res :
+  identifier : 0x1423b48100386fc0
+  internal_properties : CAAAAAgAAAA7wCugPa3Llh29up4VO+T++wa3OrewuQ3WP4NJV47trUqhlqE=
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

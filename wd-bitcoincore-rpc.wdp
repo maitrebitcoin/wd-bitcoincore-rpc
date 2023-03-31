@@ -39,6 +39,16 @@ project :
      internal_properties : CAAAAAgAAAB3019DYN1VVmGnHHFrcWXEnciUNP2oJflKjL636Fw++gYK+FueG5vmPvji3qZaJppi4g==
      physical_name : .\NoeudBitcoin.wdc
      type : 4
+   -
+     name : test_api_bitcoin_node_rpc
+     identifier : 0x44267acf0208091d
+     internal_properties : CAAAAAgAAABGzK7yMW5GaXbIFkfvyLaQ4pfB4UQv93RWzejUTdc98wkl+BH6AK/3DwnzzVWLd2lT0w==
+     physical_name : .\test_api_bitcoin_node_rpc.wdw
+     type : 2
+     configurations :
+      -
+        configuration_id : 16219966039247374728
+        excluded : true
   other_elements : []
   net_assemblies : []
   uwp_api : []
