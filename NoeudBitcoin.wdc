@@ -1,0 +1,385 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : NoeudBitcoin
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x14232d49000a3cf0
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      // classe wrapper pour l'interface JSon-RPC d'un noeud bitcoin-core
+      //voir https://developer.bitcoin.org/reference/rpc/ pour plus de détails sur les méthodes
+      
+      NoeudBitcoin est une Classe
+      	// N° de port pour Json RPC. par défaut 32
+      	mum_port est entier 
+      	// information d’authentification
+      	user est chaine ansi
+      	password est chaine ansi
+      	// Option pour tracer le traffic http
+      	mode_trace_http est un booléen 
+      fin
+      
+      constant ERR_JSON_RPC = 21 // N° d'erreur renvoyé par ErreurInfo
+      constant HASH_NULL    = "0000000000000000000000000000000000000000000000000000000000000000"
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1451053296500030704
+     type_code : 27
+     code : |1+
+      procédure Constructeur(login est chaine,pass est chaine="")
+      
+      :mum_port = 8332
+      :user 	  = login 
+      :password = pass 
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1451053296500096240
+     type_code : 28
+     code : |1+
+      procédure Destructeur()
+     type : 655360
+   -
+     name : genèreSectionFichierConfiguration
+     procedure_id : 1451207485830530771
+     type_code : 12
+     code : |1-
+      // génère la section du fichier de configuration "bitcoin.conf" qui permet de communiquer avec un noeud bitcoincore local
+      procédure genèreSectionFichierConfiguration() : chaine
+      
+      sSecctionConfigRcp est une chaîne = [
+      # Connexion RPC
+      rpcuser=[%:user%]
+      rpcpassword=[%:password%]
+      rpcport=8332
+      rpcallowip=127.0.0.1
+      server=1
+      ]
+      renvoyer sSecctionConfigRcp
+     type : 458752
+   -
+     name : _requeteRpc
+     procedure_id : 1451054018055229439
+     type_code : 12
+     code : |1+
+      // exécution d'une requete RPC
+      procédure PRIVÉE _requeteRpc( nomMethode est chaine, _callback_succes procédure, *  )
+      
+      
+      requete_local est un httpRequête
+      requete_local.URL			= "http://localhost:" + :mum_port + "/"
+      requete_local.Méthode		= httpPost
+      // Info d'identification pour "Authorization: Basic "
+      //requete_local.Entête["Authorization"]="Basic "+ Encode(login+":"+ pass ,encodeBASE64)
+      requete_local.Utilisateur	= :user
+      requete_local.MotDePasse	= :password
+      // init requet json a envoyer
+      s_params est chaine
+      
+      requete_json est JSON = [
+      	{
+      	"jsonrpc": "1.0", 
+      	"id": "wdbridge", 
+      	"method": "[%nomMethode%]", 
+      	"params": [[%s_params%]]
+      	}
+      ] 
+      POUR I = 3 _À_ MesParamètres..Occurrence
+      	//s_params += [","] + """"+ MesParamètres[I] + """"
+      	requete_json.params[I-2] = MesParamètres[I] 
+      FIN
+      
+      // ex : 	{"jsonrpc": "1.0", "id": "wdbridge", "method": "[%nomMethode%]", "params": []}
+      requete_local.Contenu	  = requete_json
+      requete_local.ContentType = typeMimeJSON
+      //Trace(req_0.URL)
+      //Trace(req_0.Contenu)
+      //trace(req_0.Entête["Authorization"])
+      si mode_trace_http alors
+      	requete_local.ProcédureTrace = _CallbcakTraceTraffcieReseauHttp
+      fin
+      reponse_0 est un httpRéponse = HTTPEnvoie(requete_local)
+      SI ErreurDétectée ALORS
+      	renvoyer faux
+      FIN
+      resultat_json est un JSON
+      // si erreur
+      si reponse_0.CodeEtat<>200 ALORS
+      	// erreur 500 : internal serveur error, on a peut peut plus d'info
+      	 si reponse_0.CodeEtat=500 ALORS
+      	 	resultat_json = reponse_0.Contenu
+      	 	SI resultat_json.error<>Null ALORS
+      	 		ErreurDéclenche(::ERR_JSON_RPC, resultat_json.error.message )
+      	 		RENVOYER Faux
+      		fin	 		
+      	 FIN
+      	
+      	
+      	ErreurDéclenche(::ERR_JSON_RPC, reponse_0.DescriptionCodeEtat )
+      	RENVOYER Faux
+      FIN
+      
+      //	on décode de résultat
+      // ex:
+      // {"result":782927,"error":null,"id":"wdbridge"}<\n>
+      
+      resultat_json = reponse_0.Contenu
+      si resultat_json.error<>null ALORS
+      	ErreurDéclenche(::ERR_JSON_RPC, resultat_json.error.message )
+      	RENVOYER Faux
+      FIN
+      
+      // Sucess
+      _callback_succes( resultat_json.result )
+      RENVOYER vrai
+     type : 458752
+   -
+     name : _CallbcakTraceTraffcieReseauHttp
+     procedure_id : 1451055912136116294
+     type_code : 12
+     code : |1+
+      procédure privée _CallbcakTraceTraffcieReseauHttp(nTypeInfo est entier, bufByData est un Buffer)
+      SELON nTypeInfo
+      	CAS httpTraceEntêteEnvoyé:
+      		Trace("Entête envoyé : ", ...
+      		UTF8VersChaîne(bufByData))
+      	CAS httpTraceDonnéeEnvoyée:
+      		Trace("Données envoyées : ", ...
+      		bufByData)
+      	CAS httpTraceEntêteRecu:
+      		Trace("Entête reçu : ", ...
+      		UTF8VersChaîne(bufByData))
+      	CAS httpTraceDonnéeRecue:
+      		Trace("Données reçues : ", ...
+      		bufByData)
+      fin
+      
+     type : 458752
+   -
+     name : getbestblockhash
+     procedure_id : 1451058136929562518
+     type_code : 12
+     code : |1+
+      // renvoie le hash du dernier bloc de la chaine la plus longue entièrement validée
+      procédure getbestblockhash() : UUID sur 256
+      
+      resultat est un UUID sur 256
+      _requeteRpc("getbestblockhash", (s)=>{ resultat = s } )
+      renvoyer resultat
+     type : 458752
+   -
+     name : getblock_json
+     procedure_id : 1451061293731063658
+     type_code : 12
+     code : |1+
+      // renvoie un block a partir de son hash
+      // verbosity = 0 pour juste le bloc au format binaire, utiliser plutot getblock_brut
+      // verbosity = 1 pour des info au format JSON
+      // verbosity = 2 pour des info au format JSON + infos de transaction
+      procédure getblock_json( hash uuid sur 256, verbosity entier = 1 ) : JSON
+      
+      resultat est un JSON
+      _requeteRpc("getblock", (s)=>{ resultat = s }, hash, verbosity  )
+      RENVOYER resultat
+     type : 458752
+   -
+     name : getblock_brut
+     procedure_id : 1451223458819786299
+     type_code : 12
+     code : |1+
+      // renvoie le contenu binaire d'un bloc en fonction de son hash
+      // voir https://developer.bitcoin.org/reference/rpc/getblock.html
+      procédure getblock_brut(hash uuid sur 256 )  : buffer
+      
+      resultat est une chaîne ANSI
+      _requeteRpc("getblock", (s)=>{ resultat = s }, hash, 0  )
+      
+      RENVOYER HexaVersBuffer( resultat )
+     type : 458752
+   -
+     name : getblockchaininfo
+     procedure_id : 1451065279461248739
+     type_code : 12
+     code : |1+
+      // renvoie un objet JSon contenant diverses info sur la chaine de blocs (taille sur disque par ex.)
+      procédure getblockchaininfo() : json
+      
+      resultat est un JSON
+      _requeteRpc("getblockchaininfo", (s)=>{ resultat = s } )
+      RENVOYER resultat
+      
+     type : 458752
+   -
+     name : getblockfilter
+     procedure_id : 1451216324877708787
+     type_code : 12
+     code : |1-
+      // Retrieve a BIP 157 content filter for a particular block
+      // voir https://developer.bitcoin.org/reference/rpc/getblockfilter.html
+      procédure getblockfilter( hash uuid sur 256, filtertype chaine="basic" ) : JSON
+      
+      resultat est un JSON
+      _requeteRpc("getblockfilter", (s)=>{ resultat = s }, hash, filtertype)
+      RENVOYER resultat
+     type : 458752
+   -
+     name : getblockcount
+     procedure_id : 1451066305958606900
+     type_code : 12
+     code : |1+
+      // renvoie la hauteur du bloc plus haut de la chaine = taille de chaine avec le plus de preuve de travail cumulée
+      procédure getblockcount() : entier
+      
+      resultat est un entier
+      _requeteRpc("getblockcount", (r)=>{ resultat = r } )
+      RENVOYER resultat
+     type : 458752
+   -
+     name : getblockhash
+     procedure_id : 1451218163124008512
+     type_code : 12
+     code : |1+
+      // renvoie le hash du bloc de hauteur <hauteur> dans la meilleur chaine courante
+      procédure getblockhash( hauteur entier) : uuid sur 256
+      
+      resultat est un UUID sur 256
+      _requeteRpc("getblockhash", (s)=>{ resultat = s}, hauteur )
+      RENVOYER resultat
+     type : 458752
+   -
+     name : getblockheader_json
+     procedure_id : 1451219335650484377
+     type_code : 12
+     code : |1+
+      // renvoie les infos de l'entête d'un bloc par hash détaillées au format json
+      // voir https://developer.bitcoin.org/reference/rpc/getblockheader.html
+      procédure getblockheader_json( hash uuid sur 256) : JSON
+      
+      resultat est un JSON
+      _requeteRpc("getblockheader", (s)=>{ resultat = s}, hash, vrai)
+      RENVOYER resultat
+     type : 458752
+   -
+     name : getblockheader_brut
+     procedure_id : 1451221178191687409
+     type_code : 12
+     code : |1+
+      // renvoie les infos de l'entête brut d'un bloc par hash 
+      // voir https://developer.bitcoin.org/reference/rpc/getblockheader.html
+      PROCÉDURE getblockheader_brut( hash UUID sur 256 ) : buffer
+      
+      resultat est une chaîne ANSI
+      _requeteRpc("getblockheader", (s)=>{ resultat = s}, hash, faux)
+      	
+      RENVOYER HexaVersBuffer(resultat)
+     type : 458752
+   -
+     name : getblockstats
+     procedure_id : 1451226972103524903
+     type_code : 12
+     code : |1+
+      // calcul de statistiques sur un bloc a partie de son hash (ex : frais de transactions min/max/moyen )
+      // voir https://developer.bitcoin.org/reference/rpc/getblockstats.html
+      procédure getblockstats(hash UUID sur 256 ) : json
+      
+      resultat est un JSON
+      _requeteRpc("getblockstats", (s)=>{ resultat = s}, hash )
+      RENVOYER resultat
+     type : 458752
+   -
+     name : getblockstats
+     procedure_id : 1451226972103524903
+     type_code : 12
+     code : |1+
+      // calcul de statistiques sur un bloc a partie de sa hauteur  (ex : frais de transactions min/max/moyen )
+      // voir https://developer.bitcoin.org/reference/rpc/getblockstats.html
+      PROCÉDURE getblockstats( hauteur est entier ) : JSON
+      
+      resultat est un JSON
+      _requeteRpc("getblockstats", (s)=>{ resultat = s}, hauteur )
+      RENVOYER resultat
+     type : 458753
+   -
+     name : getchaintips
+     procedure_id : 1451228698680714500
+     type_code : 12
+     code : |1+
+      // Info sur la chaine et ses branches si il y en a
+      // voir https://developer.bitcoin.org/reference/rpc/getchaintips.html
+      procédure getchaintips()
+      
+      resultat est un JSON
+      _requeteRpc("getchaintips", (s)=>{ resultat = s} )
+      RENVOYER resultat
+     type : 458752
+   -
+     name : getchaintxstats
+     procedure_id : 1451229458890103032
+     type_code : 12
+     code : |1+
+      // statistique sur le nombre de transactions
+      // voir https://developer.bitcoin.org/reference/rpc/getchaintxstats.html
+      procédure getchaintxstats( nbBlock entier=0, hash_dernier_bloc est un UUID sur 256=HASH_NULL )
+      
+      resultat est un JSON
+      si nbBlock=0 alors
+      	// aucun paramètre
+      	_requeteRpc("getchaintxstats", (s)=>{ resultat = s}  )
+      sinon si hash_dernier_bloc=HASH_NULL ALORS
+      	// 1 paramètres
+      	_requeteRpc("getchaintxstats", (s)=>{ resultat = s}, nbBlock  )
+      sinon
+      	// 2 paramètres
+      	_requeteRpc("getchaintxstats", (s)=>{ resultat = s}, nbBlock, hash_dernier_bloc  )
+      fin
+      RENVOYER resultat
+     type : 458752
+   -
+     name : getdifficulty
+     procedure_id : 1451234784649938323
+     type_code : 12
+     code : |1+
+      // renvoie la difficulté de la preuve de travail
+      // voir https://developer.bitcoin.org/reference/rpc/getdifficulty.html
+      procédure getdifficulty() : numérique
+      
+      resultat est un numérique 
+       _requeteRpc("getdifficulty", (r)=>{ resultat = r} )
+       
+      RENVOYER resultat
+     type : 458752
+   -
+     name : getmempoolinfo
+     procedure_id : 1451238297933414408
+     type_code : 12
+     code : |1+
+      // détails sur les transaction dans le mempool
+      // voir https://developer.bitcoin.org/reference/rpc/getmempoolinfo.html
+      procédure getmempoolinfo() : JSON
+      
+      resultat est un  JSON
+      _requeteRpc("getmempoolinfo", (r)=>{ resultat = r} )
+      RENVOYER resultat
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x14232d3e000412b4
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ
