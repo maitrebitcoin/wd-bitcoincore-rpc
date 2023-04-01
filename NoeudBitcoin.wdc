@@ -526,16 +526,49 @@ class :
       RENVOYER resultat
      type : 458752
    -
+     name : getmemoryinfo
+     procedure_id : 1452483241440665447
+     type_code : 12
+     code : |1+
+      // renvoie des stats sur l'utilsiation de la mémoire
+      // voir https://developer.bitcoin.org/reference/rpc/getmemoryinfo.html 
+      procédure getmemoryinfo() : JSON
+      
+      
+      resultat est un  JSON
+      _requeteRpc("getmemoryinfo", (r)=>{ resultat = r})
+      RENVOYER resultat
+     type : 458752
+   -
      name : getrpcinfo
      procedure_id : 1452481961540309597
      type_code : 12
-     code : |1-
+     code : |1+
       // détail sur le serveur RPC.
       // voir https://developer.bitcoin.org/reference/rpc/getrpcinfo.html
       procédure getrpcinfo() : JSON
       
       resultat est un  JSON
       _requeteRpc("getrpcinfo", (r)=>{ resultat = r})
+      RENVOYER resultat
+     type : 458752
+   -
+     name : help
+     procedure_id : 1452484207808531719
+     type_code : 12
+     code : |1-
+      // renvoie l'aide sur une commande ou la liste des commandes
+      // voir https://developer.bitcoin.org/reference/rpc/help.html
+      procédure help( nomCommande chaine="" ) : chaine
+      
+      resultat est chaine
+      si nomCommande="" ALORS
+      	// liste les commandes
+      	_requeteRpc("help", (r)=>{ resultat = r})
+      sinon
+      	// aide sur la commande <nomCommande>
+      	_requeteRpc("help", (r)=>{ resultat = r}, nomCommande)
+      fin
       RENVOYER resultat
      type : 458752
   procedure_templates : []
