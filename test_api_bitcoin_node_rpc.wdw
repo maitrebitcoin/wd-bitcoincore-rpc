@@ -989,7 +989,10 @@ window :
       -
         code : |1+
          PROCÉDURE INTERNE _test()
-         	RENVOYER bitcoin_core_rpc.uptime()
+         	d est une durée = bitcoin_core_rpc.uptime()
+         	si d=0 	RENVOYER ""
+          	renvoyer DuréeVersChaîne(d,"J jour(s) HHh MMm SSsec")
+         	
          FIN
          _TestApi_chaine( _test )
          

@@ -556,7 +556,7 @@ class :
      name : help
      procedure_id : 1452484207808531719
      type_code : 12
-     code : |1-
+     code : |1+
       // renvoie l'aide sur une commande ou la liste des commandes
       // voir https://developer.bitcoin.org/reference/rpc/help.html
       procédure help( nomCommande chaine="" ) : chaine
@@ -570,6 +570,19 @@ class :
       	_requeteRpc("help", (r)=>{ resultat = r}, nomCommande)
       fin
       RENVOYER resultat
+     type : 458752
+   -
+     name : uptime
+     procedure_id : 1452485311615384135
+     type_code : 12
+     code : |1+
+      // renvoie le temps depuis lequel le noeud bitcoin est lancé
+      procédure uptime() : durée
+      
+      resultat est un Durée
+      _requeteRpc("uptime", (r)=>{ resultat.Seconde = r})
+      RENVOYER resultat
+      
      type : 458752
   procedure_templates : []
   property_templates : []
