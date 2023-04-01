@@ -203,7 +203,7 @@ class :
       
       resultat est une chaîne ANSI
       _requeteRpc("getblock", (s)=>{ resultat = s }, hash.valeur, 0  )
-      
+      SI ErreurDétectée RENVOYER "" // sinon HexaVersBuffer RAZ ErreurInfo()
       RENVOYER HexaVersBuffer( resultat )
      type : 458752
    -
@@ -280,7 +280,7 @@ class :
       
       resultat est une chaîne ANSI
       _requeteRpc("getblockheader", (s)=>{ resultat = s}, hash.valeur, faux)
-      	
+      SI ErreurDétectée RENVOYER "" // sinon HexaVersBuffer RAZ ErreurInfo()
       RENVOYER HexaVersBuffer(resultat)
      type : 458752
    -
@@ -445,8 +445,32 @@ class :
       resultat est un  JSON
       _requeteRpc("gettxout", (r)=>{ resultat = r}, txid.valeur,indice, avecMempool)
       RENVOYER resultat
+     type : 458752
+   -
+     name : gettxoutproof
+     procedure_id : 1452407040127903040
+     type_code : 12
+     code : |1+
+      // renvoie la preuve que des transactions sont bien dans un bloc
+      // voir https://developer.bitcoin.org/reference/rpc/gettxoutproof.html
+      procédure gettxoutproof( tabTxid est un tableau de TransactionID,  hash est un BlockHash ) : buffer
       
-      
+      // conversion de paramètre pour l'appel json
+      tab_txid_converti est un tableau de chaine// = "[" 
+      pour i = 1 _a_  tabTxid..Occurrence
+      	tab_txid_converti.ajoute( tabTxid[i].valeur )
+      FIN
+       
+      resultat est une chaine ANSI
+      si hash.valeur=HASH_NULL ALORS
+      	// 1 paramètre
+      	_requeteRpc("gettxoutproof", (r)=>{ resultat = r}, tab_txid_converti)
+      sinon
+      	// 2 peramètres
+      	_requeteRpc("gettxoutproof", (r)=>{ resultat = r}, tab_txid_converti, hash.valeur)
+      fin
+      si ErreurDétectée renvoyer "" // sinon HexaVersBuffer RAZ ErreurInfo()
+      RENVOYER  HexaVersBuffer(resultat) 
       
      type : 458752
   procedure_templates : []
