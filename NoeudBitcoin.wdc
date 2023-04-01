@@ -424,14 +424,26 @@ class :
      name : getrawmempool
      procedure_id : 1452402869717095356
      type_code : 12
-     code : |1-
+     code : |1+
       // renvoie tous les txid de transactions dans le mempool
-      procédure getrawmempool( détaillé Booléen = faux, mempool_sequence booléen = faux ) : json
-      
+      procédure getrawmempool( détaillé Booléen = faux, mempoolSequence booléen = faux ) : json
       
       resultat est un  JSON
-      _requeteRpc("getrawmempool", (r)=>{ resultat = r}, détaillé,  mempool_sequence)
+      _requeteRpc("getrawmempool", (r)=>{ resultat = r}, détaillé,  mempoolSequence)
       RENVOYER resultat
+     type : 458752
+   -
+     name : gettxout
+     procedure_id : 1452405287780903496
+     type_code : 12
+     code : |1+
+      procédure gettxout( txid est un TransactionID, indice entier, avecMempool est un booléen = vrai ) : json
+      
+      resultat est un  JSON
+      _requeteRpc("gettxout", (r)=>{ resultat = r}, txid.valeur,indice, avecMempool)
+      RENVOYER resultat
+      
+      
      type : 458752
   procedure_templates : []
   property_templates : []
