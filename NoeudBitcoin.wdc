@@ -426,6 +426,7 @@ class :
      type_code : 12
      code : |1+
       // renvoie tous les txid de transactions dans le mempool
+      // voir https://developer.bitcoin.org/reference/rpc/getrawmempool.html
       procédure getrawmempool( détaillé Booléen = faux, mempoolSequence booléen = faux ) : json
       
       resultat est un  JSON
