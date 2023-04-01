@@ -33,3 +33,13 @@ SI  ErreurDétectée ALORS
 FIN
 Info("Taille de la blockchain : [%taille_blockchain%] blocks" )
 ```
+
+# API Disponibles
+
+la liste détaillé des APIS peut être trouvée ici: 
+https://developer.bitcoin.org/reference/rpc/index.html
+
+
+
+
+
