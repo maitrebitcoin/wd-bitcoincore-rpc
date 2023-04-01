@@ -471,7 +471,26 @@ class :
       fin
       si ErreurDétectée renvoyer "" // sinon HexaVersBuffer RAZ ErreurInfo()
       RENVOYER  HexaVersBuffer(resultat) 
+     type : 458752
+   -
+     name : gettxoutsetinfo
+     procedure_id : 1452432582300164814
+     type_code : 12
+     code : |1-
+      // renvoie des statistique sur l'utxo set
+      // voir https://developer.bitcoin.org/reference/rpc/gettxoutsetinfo.html
+      //NOTE : le temps de réponse peut être assez long (~30 secondes)
+      procédure gettxoutsetinfo( avecLesHash est un booléen = faux  ) : json
       
+      hash_type est chaine = "none"
+      si avecLesHash ALORS
+      	hash_type = "hash_serialized_2"
+      FIN
+      
+      
+      resultat est un  JSON
+      _requeteRpc("gettxoutsetinfo", (r)=>{ resultat = r}, hash_type)
+      RENVOYER resultat
      type : 458752
   procedure_templates : []
   property_templates : []
