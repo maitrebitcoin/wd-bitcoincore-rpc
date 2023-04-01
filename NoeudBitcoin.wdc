@@ -477,16 +477,25 @@ class :
      procedure_id : 1452432582300164814
      type_code : 12
      code : |1-
-      // renvoie des statistique sur l'utxo set
+      // renvoie des statistiques sur l'utxo set
       // voir https://developer.bitcoin.org/reference/rpc/gettxoutsetinfo.html
-      //NOTE : le temps de réponse peut être assez long (~30 secondes)
+      //* NOTE : le temps de réponse peut être assez long (~30 secondes)
+      // ex de résultat:
+      //{
+      //	"height":783451,
+      //	"bestblock":"0000000000000000000029d63cb63b02d4ac3275e0dee07f6ab3943781e1a340",
+      //	"txouts":87160255,
+      //	"bogosize":6504281822,
+      //	"total_amount":19333855.70820647,
+      //	"transactions":51723603,
+      //	"disk_size":5320776083
+      //}
       procédure gettxoutsetinfo( avecLesHash est un booléen = faux  ) : json
       
       hash_type est chaine = "none"
       si avecLesHash ALORS
       	hash_type = "hash_serialized_2"
       FIN
-      
       
       resultat est un  JSON
       _requeteRpc("gettxoutsetinfo", (r)=>{ resultat = r}, hash_type)
