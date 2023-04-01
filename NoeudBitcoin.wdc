@@ -500,7 +500,7 @@ class :
      name : gettxoutsetinfo
      procedure_id : 1452432582300164814
      type_code : 12
-     code : |1-
+     code : |1+
       // renvoie des statistiques sur l'utxo set
       // voir https://developer.bitcoin.org/reference/rpc/gettxoutsetinfo.html
       //* NOTE : le temps de réponse peut être assez long (~30 secondes)
@@ -523,6 +523,19 @@ class :
       
       resultat est un  JSON
       _requeteRpc("gettxoutsetinfo", (r)=>{ resultat = r}, hash_type)
+      RENVOYER resultat
+     type : 458752
+   -
+     name : getrpcinfo
+     procedure_id : 1452481961540309597
+     type_code : 12
+     code : |1-
+      // détail sur le serveur RPC.
+      // voir https://developer.bitcoin.org/reference/rpc/getrpcinfo.html
+      procédure getrpcinfo() : JSON
+      
+      resultat est un  JSON
+      _requeteRpc("getrpcinfo", (r)=>{ resultat = r})
       RENVOYER resultat
      type : 458752
   procedure_templates : []
