@@ -29,7 +29,7 @@ class :
       fin
       
       constant ERR_JSON_RPC = 21 // N° d'erreur renvoyé par ErreurInfo
-      constant HASH_NULL    = "0000000000000000000000000000000000000000000000000000000000000000"
+      
      type : 131072
   procedures :
    -
@@ -172,10 +172,10 @@ class :
      type_code : 12
      code : |1+
       // renvoie le hash du dernier bloc de la chaine la plus longue entièrement validée
-      procédure getbestblockhash() : UUID sur 256
+      procédure getbestblockhash() : BlockHash
       
-      resultat est un UUID sur 256
-      _requeteRpc("getbestblockhash", (s)=>{ resultat = s } )
+      resultat est un BlockHash // UUID sur 256
+      _requeteRpc("getbestblockhash", (s)=>{ resultat.valeur = s } )
       renvoyer resultat
      type : 458752
    -
@@ -187,10 +187,10 @@ class :
       // verbosity = 0 pour juste le bloc au format binaire, utiliser plutot getblock_brut
       // verbosity = 1 pour des info au format JSON
       // verbosity = 2 pour des info au format JSON + infos de transaction
-      procédure getblock_json( hash uuid sur 256, verbosity entier = 1 ) : JSON
+      procédure getblock_json( hash BlockHash, verbosity entier = 1 ) : JSON
       
       resultat est un JSON
-      _requeteRpc("getblock", (s)=>{ resultat = s }, hash, verbosity  )
+      _requeteRpc("getblock", (s)=>{ resultat = s }, hash.valeur, verbosity  )
       RENVOYER resultat
      type : 458752
    -
@@ -200,10 +200,10 @@ class :
      code : |1+
       // renvoie le contenu binaire d'un bloc en fonction de son hash
       // voir https://developer.bitcoin.org/reference/rpc/getblock.html
-      procédure getblock_brut(hash uuid sur 256 )  : buffer
+      procédure getblock_brut(hash BlockHash )  : buffer
       
       resultat est une chaîne ANSI
-      _requeteRpc("getblock", (s)=>{ resultat = s }, hash, 0  )
+      _requeteRpc("getblock", (s)=>{ resultat = s }, hash.valeur, 0  )
       
       RENVOYER HexaVersBuffer( resultat )
      type : 458752
@@ -227,10 +227,10 @@ class :
      code : |1-
       // Retrieve a BIP 157 content filter for a particular block
       // voir https://developer.bitcoin.org/reference/rpc/getblockfilter.html
-      procédure getblockfilter( hash uuid sur 256, filtertype chaine="basic" ) : JSON
+      procédure getblockfilter( hash BlockHash, filtertype chaine="basic" ) : JSON
       
       resultat est un JSON
-      _requeteRpc("getblockfilter", (s)=>{ resultat = s }, hash, filtertype)
+      _requeteRpc("getblockfilter", (s)=>{ resultat = s }, hash.valeur, filtertype)
       RENVOYER resultat
      type : 458752
    -
@@ -251,10 +251,10 @@ class :
      type_code : 12
      code : |1+
       // renvoie le hash du bloc de hauteur <hauteur> dans la meilleur chaine courante
-      procédure getblockhash( hauteur entier) : uuid sur 256
+      procédure getblockhash( hauteur entier) : TransactionID
       
-      resultat est un UUID sur 256
-      _requeteRpc("getblockhash", (s)=>{ resultat = s}, hauteur )
+      resultat est un TransactionID
+      _requeteRpc("getblockhash", (s)=>{ resultat.valeur = s}, hauteur )
       RENVOYER resultat
      type : 458752
    -
@@ -264,10 +264,10 @@ class :
      code : |1+
       // renvoie les infos de l'entête d'un bloc par hash détaillées au format json
       // voir https://developer.bitcoin.org/reference/rpc/getblockheader.html
-      procédure getblockheader_json( hash uuid sur 256) : JSON
+      procédure getblockheader_json( hash BlockHash) : JSON
       
       resultat est un JSON
-      _requeteRpc("getblockheader", (s)=>{ resultat = s}, hash, vrai)
+      _requeteRpc("getblockheader", (s)=>{ resultat = s}, hash.valeur, vrai)
       RENVOYER resultat
      type : 458752
    -
@@ -277,10 +277,10 @@ class :
      code : |1+
       // renvoie les infos de l'entête brut d'un bloc par hash 
       // voir https://developer.bitcoin.org/reference/rpc/getblockheader.html
-      PROCÉDURE getblockheader_brut( hash UUID sur 256 ) : buffer
+      PROCÉDURE getblockheader_brut( hash BlockHash ) : buffer
       
       resultat est une chaîne ANSI
-      _requeteRpc("getblockheader", (s)=>{ resultat = s}, hash, faux)
+      _requeteRpc("getblockheader", (s)=>{ resultat = s}, hash.valeur, faux)
       	
       RENVOYER HexaVersBuffer(resultat)
      type : 458752
@@ -291,10 +291,10 @@ class :
      code : |1+
       // calcul de statistiques sur un bloc a partie de son hash (ex : frais de transactions min/max/moyen )
       // voir https://developer.bitcoin.org/reference/rpc/getblockstats.html
-      procédure getblockstats(hash UUID sur 256 ) : json
+      procédure getblockstats(hash BlockHash ) : json
       
       resultat est un JSON
-      _requeteRpc("getblockstats", (s)=>{ resultat = s}, hash )
+      _requeteRpc("getblockstats", (s)=>{ resultat = s}, hash.valeur )
       RENVOYER resultat
      type : 458752
    -
@@ -327,24 +327,34 @@ class :
      name : getchaintxstats
      procedure_id : 1451229458890103032
      type_code : 12
-     code : |1+
+     code : |1-
       // statistique sur le nombre de transactions
       // voir https://developer.bitcoin.org/reference/rpc/getchaintxstats.html
-      procédure getchaintxstats( nbBlock entier=0, hash_dernier_bloc est un UUID sur 256=HASH_NULL )
+      procédure getchaintxstats( nbBlock entier=0 )
       
       resultat est un JSON
       si nbBlock=0 alors
       	// aucun paramètre
       	_requeteRpc("getchaintxstats", (s)=>{ resultat = s}  )
-      sinon si hash_dernier_bloc=HASH_NULL ALORS
+      sinon 
       	// 1 paramètres
       	_requeteRpc("getchaintxstats", (s)=>{ resultat = s}, nbBlock  )
-      sinon
-      	// 2 paramètres
-      	_requeteRpc("getchaintxstats", (s)=>{ resultat = s}, nbBlock, hash_dernier_bloc  )
       fin
       RENVOYER resultat
+      // statistique sur le nombre de transactions
+      // voir https://developer.bitcoin.org/reference/rpc/getchaintxstats.html
      type : 458752
+   -
+     name : getchaintxstats
+     procedure_id : 1451229458890103032
+     type_code : 12
+     code : |1-
+      PROCÉDURE getchaintxstats( nbBlock entier, hash_dernier_bloc BlockHash  )
+      // 2 paramètres
+      resultat est un JSON
+      _requeteRpc("getchaintxstats", (s)=>{ resultat = s}, nbBlock, hash_dernier_bloc.valeur  )
+      RENVOYER resultat
+     type : 458753
    -
      name : getdifficulty
      procedure_id : 1451234784649938323
