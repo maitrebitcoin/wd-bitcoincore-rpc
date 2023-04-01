@@ -453,7 +453,7 @@ class :
      code : |1+
       // renvoie la preuve que des transactions sont bien dans un bloc
       // voir https://developer.bitcoin.org/reference/rpc/gettxoutproof.html
-      procédure gettxoutproof( tabTxid est un tableau de TransactionID,  hash est un BlockHash ) : buffer
+      procédure gettxoutproof( tabTxid est un tableau de TransactionID,  hash est un BlockHash ) : ProofTxidInChain
       
       // conversion de paramètre pour l'appel json
       tab_txid_converti est un tableau de chaine// = "[" 
@@ -461,16 +461,40 @@ class :
       	tab_txid_converti.ajoute( tabTxid[i].valeur )
       FIN
        
-      resultat est une chaine ANSI
+      resultat est ProofTxidInChain
+      resultat_str est une chaine ANSI
       si hash.valeur=HASH_NULL ALORS
       	// 1 paramètre
-      	_requeteRpc("gettxoutproof", (r)=>{ resultat = r}, tab_txid_converti)
+      	_requeteRpc("gettxoutproof", (r)=>{ resultat_str = r}, tab_txid_converti)
       sinon
       	// 2 peramètres
-      	_requeteRpc("gettxoutproof", (r)=>{ resultat = r}, tab_txid_converti, hash.valeur)
+      	_requeteRpc("gettxoutproof", (r)=>{ resultat_str = r}, tab_txid_converti, hash.valeur)
       fin
-      si ErreurDétectée renvoyer "" // sinon HexaVersBuffer RAZ ErreurInfo()
-      RENVOYER  HexaVersBuffer(resultat) 
+      si ErreurDétectée renvoyer resultat // sinon HexaVersBuffer RAZ ErreurInfo()
+      resultat.valeur =  HexaVersBuffer(resultat_str) 
+      renvoyer resultat
+     type : 458752
+   -
+     name : verifytxoutproof
+     procedure_id : 1452435498583244723
+     type_code : 12
+     code : |1+
+      // vérifie si une preuve correspond bien a des transactions dans la chaine
+      // voir https://developer.bitcoin.org/reference/rpc/verifytxoutproof.html
+      procédure verifytxoutproof( preuve est ProofTxidInChain ) : tableau de TransactionID
+      preuve_hexstr est chaine ANSI = remplace( BufferVersHexa(preuve.valeur,1,SansLigne), " ","")
+      resultat est un tableau de TransactionID
+      resultatJSON est un JSON
+      
+      _requeteRpc("verifytxoutproof", (r)=>{ resultatJSON = r}, preuve_hexstr )
+      SI ErreurDétectée renvoyer resultat
+      // conversion du json en tableau de 	TransactionID
+      pour tous txid de resultatJSON
+      	transctionID est TransactionID
+      	transctionID.valeur = ""+ txid
+      	resultat.Ajoute(transctionID)
+      fin
+      RENVOYER resultat
      type : 458752
    -
      name : gettxoutsetinfo

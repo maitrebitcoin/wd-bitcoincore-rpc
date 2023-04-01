@@ -27,6 +27,11 @@ procedure_set :
       TransactionID est une structure
       	valeur est un UUID sur 256
       FIN
+      // Preuve que des transactions sont dans la bockchain
+      ProofTxidInChain est une structure
+      	valeur est un  buffer
+      fin
+      
       
       // ----------------------------------------------------------------------------------------------------
       // Constantes
