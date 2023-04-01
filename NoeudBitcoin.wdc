@@ -120,11 +120,10 @@ class :
       	 si reponse_0.CodeEtat=500 ALORS
       	 	resultat_json = reponse_0.Contenu
       	 	SI resultat_json.error<>Null ALORS
-      	 		ErreurDéclenche(::ERR_JSON_RPC, resultat_json.error.message )
+      	 		ErreurDéclenche(::ERR_JSON_RPC, resultat_json.error.message + RC + "Fonction appelée : [%nomMethode%]"  )
       	 		RENVOYER Faux
       		fin	 		
       	 FIN
-      	
       	
       	ErreurDéclenche(::ERR_JSON_RPC, reponse_0.DescriptionCodeEtat )
       	RENVOYER Faux
@@ -136,7 +135,7 @@ class :
       
       resultat_json = reponse_0.Contenu
       si resultat_json.error<>null ALORS
-      	ErreurDéclenche(::ERR_JSON_RPC, resultat_json.error.message )
+      	ErreurDéclenche(::ERR_JSON_RPC, resultat_json.error.message  + RC + "Fonction appelée : [%nomMethode%]" )
       	RENVOYER Faux
       FIN
       
@@ -370,6 +369,45 @@ class :
       RENVOYER resultat
      type : 458752
    -
+     name : getmempoolancestors
+     procedure_id : 1452399648491004631
+     type_code : 12
+     code : |1+
+      // renvoie les ancètre d'une transaction du mempool
+      // voir https://developer.bitcoin.org/reference/rpc/getmempoolancestors.html
+      procédure getmempoolancestors( txid est un TransactionID,  détaillé est un booléen=faux) : json
+      
+      resultat est un  JSON
+      _requeteRpc("getmempoolancestors", (r)=>{ resultat = r}, txid.valeur, détaillé )
+      RENVOYER resultat
+     type : 458752
+   -
+     name : getmempooldescendants
+     procedure_id : 1452400726528046646
+     type_code : 12
+     code : |1+
+      // renvoie les fils d'une transaction du mempool
+      // voir https://developer.bitcoin.org/reference/rpc/getmempooldescendants.html
+      procédure getmempooldescendants( txid est un TransactionID,  détaillé est un booléen=faux) : json
+      
+      resultat est un  JSON
+      _requeteRpc("getmempoolancestors", (r)=>{ resultat = r}, txid.valeur, détaillé )
+      RENVOYER resultat
+     type : 458752
+   -
+     name : getmempoolentry
+     procedure_id : 1452401203269658933
+     type_code : 12
+     code : |1+
+      // renvoie le deétail d'une transaction dans le mempool par txis
+      // voir https://developer.bitcoin.org/reference/rpc/getmempoolentry.html
+      procédure getmempoolentry(txid est un TransactionID) : json
+      
+      resultat est un  JSON
+      _requeteRpc("getmempoolentry", (r)=>{ resultat = r}, txid.valeur )
+      RENVOYER resultat
+     type : 458752
+   -
      name : getmempoolinfo
      procedure_id : 1451238297933414408
      type_code : 12
@@ -380,6 +418,19 @@ class :
       
       resultat est un  JSON
       _requeteRpc("getmempoolinfo", (r)=>{ resultat = r} )
+      RENVOYER resultat
+     type : 458752
+   -
+     name : getrawmempool
+     procedure_id : 1452402869717095356
+     type_code : 12
+     code : |1-
+      // renvoie tous les txid de transactions dans le mempool
+      procédure getrawmempool( détaillé Booléen = faux, mempool_sequence booléen = faux ) : json
+      
+      
+      resultat est un  JSON
+      _requeteRpc("getrawmempool", (r)=>{ resultat = r}, détaillé,  mempool_sequence)
       RENVOYER resultat
      type : 458752
   procedure_templates : []
