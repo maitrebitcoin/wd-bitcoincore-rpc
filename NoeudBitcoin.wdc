@@ -438,11 +438,14 @@ class :
      procedure_id : 1452405287780903496
      type_code : 12
      code : |1+
+      // renvoie les infosmation d'une sortie de transaction
+      // voir https://developer.bitcoin.org/reference/rpc/gettxout.html
       procédure gettxout( txid est un TransactionID, indice entier, avecMempool est un booléen = vrai ) : json
       
       resultat est un  JSON
       _requeteRpc("gettxout", (r)=>{ resultat = r}, txid.valeur,indice, avecMempool)
       RENVOYER resultat
+      
       
       
      type : 458752
