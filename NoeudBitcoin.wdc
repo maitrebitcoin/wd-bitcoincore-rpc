@@ -584,6 +584,32 @@ class :
       RENVOYER resultat
       
      type : 458752
+   -
+     name : getconnectioncount
+     procedure_id : 1452487540703929259
+     type_code : 12
+     code : |1+
+      // renvoie le nombre de noeuds auquel on est connecté
+      procédure getconnectioncount() : entier
+      
+      resultat est un entier
+      _requeteRpc("getconnectioncount", (r)=>{ resultat = r})
+      RENVOYER resultat
+     type : 458752
+   -
+     name : validateaddress
+     procedure_id : 1452488386812748873
+     type_code : 12
+     code : |1+
+      // valider un adresse bitcoin
+      procédure validateaddress( adresse chaine ) : json
+      
+      resultat est un  JSON
+      _requeteRpc("validateaddress", (r)=>{ resultat = r}, adresse)
+      RENVOYER resultat
+      
+      
+     type : 458752
   procedure_templates : []
   property_templates : []
  code_parameters :
