@@ -7,7 +7,7 @@ Crée un composant WINDEV qui permet d'acceder aux API JSON RPC d'un noeud bitct
 # Prérequis
 
 - Bitoin core doit être lancée sur la même machine **ou** un tunnel VPN vers la machine doit exister
-- la gestion du RPC doit être activée pour Bitcoin core. Ceci ce fait en mettant les paramètres suivant dans le fichier bitcoin.conf 
+- la gestion du RPC doit être activée pour Bitcoin core. Il suffitt de mettre les paramètres suivant dans le fichier bitcoin.conf 
 ```
 # Connexion RPC
 server=1
@@ -19,6 +19,8 @@ rpcallowip=127.0.0.1
 
 
 # Utilisation
+
+Compiler le composant et l'intégrer dans un projet.
 
 Exemple de code :
 ```javascript
