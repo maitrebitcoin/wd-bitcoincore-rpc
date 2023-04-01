@@ -24,14 +24,22 @@ Compiler le composant et l'intégrer dans un projet.
 
 Exemple de code :
 ```javascript
-bitcoin_core_rpc est un NoeudBitcoin(SAI_login, SAI_MotDePasse)
+bitcoin_core est un NoeudBitcoin(SAI_login, SAI_MotDePasse)
 taille_blockchain est entier
-taille_blockchain =  bitcoin_core_rpc.getblockcount() 
+// récupération de la taille de la blockchain
+taille_blockchain =  bitcoin_core.getblockcount() 
 SI  ErreurDétectée ALORS
 	Erreur()
 	RETOUR
 FIN
-Info("Taille de la blockchain : [%taille_blockchain%] blocks" )
+// récupération du hash du dernier bloc
+hash_dernier_bloc est BlockHash = bitcoin_core.getblockhash(taille_blockchain)
+SI  ErreurDétectée ALORS
+	Erreur()
+	RETOUR
+FIN
+
+Info("Taille de la blockchain : [%taille_blockchain%] blocks" +RC + "hash : [%hash_dernier_bloc.valeur%] ")
 ```
 
 # API Disponibles
