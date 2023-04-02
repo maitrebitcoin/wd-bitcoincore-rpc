@@ -607,8 +607,22 @@ class :
       resultat est un  JSON
       _requeteRpc("validateaddress", (r)=>{ resultat = r}, adresse)
       RENVOYER resultat
+     type : 458752
+   -
+     name : getindexinfo
+     procedure_id : 1452751354776051910
+     type_code : 12
+     code : |1-
+      // voir https://developer.bitcoin.org/reference/rpc/getindexinfo.html
+      procédure getindexinfo( nomIndex Chaîne=""): json
       
-      
+      resultat est un  JSON
+      si nomIndex="" alors
+      		_requeteRpc("getindexinfo", (r)=>{ resultat = r})
+      sinon
+      	_requeteRpc("getindexinfo", (r)=>{ resultat = r}, nomIndex)
+      fin
+      RENVOYER resultat
      type : 458752
   procedure_templates : []
   property_templates : []
