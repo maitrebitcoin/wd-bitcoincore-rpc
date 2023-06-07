@@ -174,7 +174,7 @@ class :
       procédure getbestblockhash() : BlockHash
       
       resultat est un BlockHash // UUID sur 256
-      _requeteRpc("getbestblockhash", (s)=>{ resultat.valeur = s } )
+      _requeteRpc("getbestblockhash", (s)=>{ resultat = s } )
       renvoyer resultat
      type : 458752
    -
@@ -189,7 +189,7 @@ class :
       procédure getblock_json( hash BlockHash, verbosity entier = 1 ) : JSON
       
       resultat est un JSON
-      _requeteRpc("getblock", (s)=>{ resultat = s }, hash.valeur, verbosity  )
+      _requeteRpc("getblock", (s)=>{ resultat = s }, hash, verbosity  )
       RENVOYER resultat
      type : 458752
    -
@@ -202,7 +202,7 @@ class :
       procédure getblock_brut(hash BlockHash )  : buffer
       
       resultat est une chaîne ANSI
-      _requeteRpc("getblock", (s)=>{ resultat = s }, hash.valeur, 0  )
+      _requeteRpc("getblock", (s)=>{ resultat = s }, hash, 0  )
       SI ErreurDétectée RENVOYER "" // sinon HexaVersBuffer RAZ ErreurInfo()
       RENVOYER HexaVersBuffer( resultat )
      type : 458752
@@ -229,7 +229,7 @@ class :
       procédure getblockfilter( hash BlockHash, filtertype chaine="basic" ) : JSON
       
       resultat est un JSON
-      _requeteRpc("getblockfilter", (s)=>{ resultat = s }, hash.valeur, filtertype)
+      _requeteRpc("getblockfilter", (s)=>{ resultat = s }, hash, filtertype)
       RENVOYER resultat
      type : 458752
    -
@@ -250,10 +250,10 @@ class :
      type_code : 12
      code : |1+
       // renvoie le hash du bloc de hauteur <hauteur> dans la meilleur chaine courante
-      procédure getblockhash( hauteur entier) : TransactionID
+      procédure getblockhash( hauteur entier) : BlockHash
       
-      resultat est un TransactionID
-      _requeteRpc("getblockhash", (s)=>{ resultat.valeur = s}, hauteur )
+      resultat est un BlockHash
+      _requeteRpc("getblockhash", (s)=>{ resultat = s}, hauteur )
       RENVOYER resultat
      type : 458752
    -
@@ -266,7 +266,7 @@ class :
       procédure getblockheader_json( hash BlockHash) : JSON
       
       resultat est un JSON
-      _requeteRpc("getblockheader", (s)=>{ resultat = s}, hash.valeur, vrai)
+      _requeteRpc("getblockheader", (s)=>{ resultat = s}, hash, vrai)
       RENVOYER resultat
      type : 458752
    -
@@ -279,7 +279,7 @@ class :
       PROCÉDURE getblockheader_brut( hash BlockHash ) : buffer
       
       resultat est une chaîne ANSI
-      _requeteRpc("getblockheader", (s)=>{ resultat = s}, hash.valeur, faux)
+      _requeteRpc("getblockheader", (s)=>{ resultat = s}, hash, faux)
       SI ErreurDétectée RENVOYER "" // sinon HexaVersBuffer RAZ ErreurInfo()
       RENVOYER HexaVersBuffer(resultat)
      type : 458752
@@ -293,7 +293,7 @@ class :
       procédure getblockstats(hash BlockHash ) : json
       
       resultat est un JSON
-      _requeteRpc("getblockstats", (s)=>{ resultat = s}, hash.valeur )
+      _requeteRpc("getblockstats", (s)=>{ resultat = s}, hash )
       RENVOYER resultat
      type : 458752
    -
@@ -351,7 +351,7 @@ class :
       PROCÉDURE getchaintxstats( nbBlock entier, hash_dernier_bloc BlockHash  )
       // 2 paramètres
       resultat est un JSON
-      _requeteRpc("getchaintxstats", (s)=>{ resultat = s}, nbBlock, hash_dernier_bloc.valeur  )
+      _requeteRpc("getchaintxstats", (s)=>{ resultat = s}, nbBlock, hash_dernier_bloc  )
       RENVOYER resultat
      type : 458753
    -
@@ -378,7 +378,7 @@ class :
       procédure getmempoolancestors( txid est un TransactionID,  détaillé est un booléen=faux) : json
       
       resultat est un  JSON
-      _requeteRpc("getmempoolancestors", (r)=>{ resultat = r}, txid.valeur, détaillé )
+      _requeteRpc("getmempoolancestors", (r)=>{ resultat = r}, txid, détaillé )
       RENVOYER resultat
      type : 458752
    -
@@ -391,7 +391,7 @@ class :
       procédure getmempooldescendants( txid est un TransactionID,  détaillé est un booléen=faux) : json
       
       resultat est un  JSON
-      _requeteRpc("getmempoolancestors", (r)=>{ resultat = r}, txid.valeur, détaillé )
+      _requeteRpc("getmempoolancestors", (r)=>{ resultat = r}, txid, détaillé )
       RENVOYER resultat
      type : 458752
    -
@@ -404,7 +404,7 @@ class :
       procédure getmempoolentry(txid est un TransactionID) : json
       
       resultat est un  JSON
-      _requeteRpc("getmempoolentry", (r)=>{ resultat = r}, txid.valeur )
+      _requeteRpc("getmempoolentry", (r)=>{ resultat = r}, txid )
       RENVOYER resultat
      type : 458752
    -
@@ -443,7 +443,7 @@ class :
       procédure gettxout( txid est un TransactionID, indice entier, avecMempool est un booléen = vrai ) : json
       
       resultat est un  JSON
-      _requeteRpc("gettxout", (r)=>{ resultat = r}, txid.valeur,indice, avecMempool)
+      _requeteRpc("gettxout", (r)=>{ resultat = r}, txid,indice, avecMempool)
       RENVOYER resultat
      type : 458752
    -
@@ -458,20 +458,20 @@ class :
       // conversion de paramètre pour l'appel json
       tab_txid_converti est un tableau de chaine// = "[" 
       pour i = 1 _a_  tabTxid..Occurrence
-      	tab_txid_converti.ajoute( tabTxid[i].valeur )
+      	tab_txid_converti.ajoute( tabTxid[i] )
       FIN
        
       resultat est ProofTxidInChain
       resultat_str est une chaine ANSI
-      si hash.valeur=HASH_NULL ALORS
+      si hash=HASH_NULL ALORS
       	// 1 paramètre
       	_requeteRpc("gettxoutproof", (r)=>{ resultat_str = r}, tab_txid_converti)
       sinon
       	// 2 peramètres
-      	_requeteRpc("gettxoutproof", (r)=>{ resultat_str = r}, tab_txid_converti, hash.valeur)
+      	_requeteRpc("gettxoutproof", (r)=>{ resultat_str = r}, tab_txid_converti, hash)
       fin
       si ErreurDétectée renvoyer resultat // sinon HexaVersBuffer RAZ ErreurInfo()
-      resultat.valeur =  HexaVersBuffer(resultat_str) 
+      resultat =  HexaVersBuffer(resultat_str) 
       renvoyer resultat
      type : 458752
    -
@@ -482,7 +482,7 @@ class :
       // vérifie si une preuve correspond bien a des transactions dans la chaine
       // voir https://developer.bitcoin.org/reference/rpc/verifytxoutproof.html
       procédure verifytxoutproof( preuve est ProofTxidInChain ) : tableau de TransactionID
-      preuve_hexstr est chaine ANSI = remplace( BufferVersHexa(preuve.valeur,1,SansLigne), " ","")
+      preuve_hexstr est chaine ANSI = remplace( BufferVersHexa(preuve,1,SansLigne), " ","")
       resultat est un tableau de TransactionID
       resultatJSON est un JSON
       
@@ -491,7 +491,7 @@ class :
       // conversion du json en tableau de 	TransactionID
       pour tous txid de resultatJSON
       	transctionID est TransactionID
-      	transctionID.valeur = ""+ txid
+      	transctionID = ""+ txid
       	resultat.Ajoute(transctionID)
       fin
       RENVOYER resultat

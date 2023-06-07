@@ -20,18 +20,16 @@ procedure_set :
       // ----------------------------------------------------------------------------------------------------
       
       // Hash ID d'un bloc
-      BlockHash est une structure
-      	valeur est un UUID sur 256
-      FIN
-      // TXID
-      TransactionID est une structure
-      	valeur est un UUID sur 256
-      FIN
-      // Preuve que des transactions sont dans la bockchain
-      ProofTxidInChain est une structure
-      	valeur est un  buffer
-      fin
+      BlockHash est un type : UUID sur 256
       
+      // TXID
+      TransactionID est type :  UUID sur 256
+      	
+      // Preuve que des transactions sont dans la bockchain
+      ProofTxidInChain est type :  buffer
+      
+      
+      //xyz est un type : UUID sur 256
       
       // ----------------------------------------------------------------------------------------------------
       // Constantes
